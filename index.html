@@ -243,7 +243,7 @@
 
         </section>
 
-      </article>
+      
 
 
         <!-- STEP 12: Testimonials section
@@ -535,23 +535,23 @@
                on each project item below (must be lowercase). -->
           <ul class="filter-list">
             <li class="filter-item">
-              <button class="active" data-filter-btn>All</button>
+              <button class="active" data-filter-btn>ALL</button>
             </li>
             <li class="filter-item">
-              <button data-filter-btn>Web design</button>
+              <button data-filter-btn>Rocket Engineering</button>
             </li>
             <li class="filter-item">
-              <button data-filter-btn>Applications</button>
+              <button data-filter-btn>Robotics</button>
             </li>
             <li class="filter-item">
-              <button data-filter-btn>Web development</button>
+              <button data-filter-btn>CAD & Fabrication</button>
             </li>
           </ul>
 
           <!-- Mobile filter dropdown (mirrors the filter buttons above — update these too) -->
           <div class="filter-select-box">
             <button class="filter-select" data-select>
-              <div class="select-value" data-selecct-value>Select category</div>
+              <div class="select-value" data-selecct-value>fabrication</div>
               <div class="select-icon">
                 <ion-icon name="chevron-down"></ion-icon>
               </div>
@@ -559,18 +559,22 @@
 
             <ul class="select-list">
               <li class="select-item">
-                <button data-select-item>All</button>
+                <button data-select-item>ALL</button>
               </li>
               <li class="select-item">
-                <button data-select-item>Web design</button>
+                <button data-select-item>Rocket Engineering</button>
               </li>
               <li class="select-item">
-                <button data-select-item>Applications</button>
+                <button data-select-item>Robotics</button>
               </li>
               <li class="select-item">
-                <button data-select-item>Web development</button>
+                <button data-select-item>CAD & Fabrication</button>
+              
+              <li class="select-item">
+                <button data-select-item>Programming</button>
               </li>
             </ul>
+            
           </div>
 
           <!-- STEP 17: Your projects!
@@ -586,77 +590,164 @@
 
                To ADD a project: copy an entire <li class="project-item"> block.
                To REMOVE one: delete the entire <li>...</li> block. -->
+                
           <ul class="project-list">
 
-            <li class="project-item active" data-filter-item data-category="web development"
-                data-project-title="Project Name #1"
-                data-project-description="Describe what this project does, why you built it, and what problem it solves. Go into detail — this appears in the popup when someone clicks on it!"
-                data-project-tech="HTML, CSS, JavaScript"
+            <li class="project-item active" data-filter-item data-category="rocket engineering"
+                data-project-title="Elysium 2 — Combustion Chamber"
+                data-project-description="Contributing to the development of the Elysium 2 liquid rocket engine as part of the Texas A&M Rocket Engine Design Team (TRED). Specialized in combustion chamber integrity and thermal management, fabricating high-precision 3D-printed silicone molds used to cast ablative linings capable of withstanding combustion temperatures of ~3000 K."
+                data-project-tech="SolidWorks, 3D Printing, Thermal Analysis, Silicone Molding"
                 data-project-link="#">
               <a href="#">
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
-                  <img src="./assets/images/project-1.jpg" alt="Project Name #1" loading="lazy">
+                  <img src="./assets/images/project-1.jpg" alt="Elysium 2 Combustion Chamber" loading="lazy">
                 </figure>
-                <h3 class="project-title">Project Name #1</h3>
-                <p class="project-category">Web development</p>
+                <h3 class="project-title">Elysium 2 — Combustion Chamber</h3>
+                <p class="project-category">Rocket Engineering</p>
               </a>
             </li>
 
-            <li class="project-item active" data-filter-item data-category="web development"
-                data-project-title="Project Name #2"
-                data-project-description="Write a detailed description of this project. What did you learn? What was the most challenging part? What would you do differently?"
-                data-project-tech="React, Node.js, MongoDB"
+            <li class="project-item active" data-filter-item data-category="rocket engineering"
+                data-project-title="Ablative Lining Thermal Analysis"
+                data-project-description="Conducted thermal analysis research to develop and validate innovative cooling solutions for the Elysium 2 rocket engine. Focused on ensuring the combustion chamber can sustain 1,500 lbs of thrust during static fire and flight, maintaining structural integrity at extreme temperatures."
+                data-project-tech="Thermal Analysis, SolidWorks Simulation, Research, Documentation"
                 data-project-link="#">
               <a href="#">
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
-                  <img src="./assets/images/project-2.png" alt="Project Name #2" loading="lazy">
+                  <img src="./assets/images/project-2.png" alt="Ablative Lining Thermal Analysis" loading="lazy">
                 </figure>
-                <h3 class="project-title">Project Name #2</h3>
-                <p class="project-category">Web development</p>
+                <h3 class="project-title">Ablative Lining Thermal Analysis</h3>
+                <p class="project-category">Rocket Engineering</p>
               </a>
             </li>
 
-            <li class="project-item active" data-filter-item data-category="web design"
-                data-project-title="Project Name #3"
-                data-project-description="Add a description for this project. Talk about the design decisions you made, the user experience you were going for, etc."
-                data-project-tech="Figma, HTML, CSS"
+            <li class="project-item active" data-filter-item data-category="robotics"
+                data-project-title="Turtle Robotics — Autonomous Vehicle"
+                data-project-description="Designing and building small-scale autonomous vehicles as part of the Turtle Robotics Hatchling team. Gained proficiency in Arduino programming, sensor integration, and embedded systems design. Contributing to the team's competition entry through hardware design and firmware development."
+                data-project-tech="Arduino, C/C++, Sensor Integration, Embedded Systems"
                 data-project-link="#">
               <a href="#">
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
-                  <img src="./assets/images/project-3.jpg" alt="Project Name #3" loading="lazy">
+                  <img src="./assets/images/project-3.jpg" alt="Turtle Robotics Autonomous Vehicle" loading="lazy">
                 </figure>
-                <h3 class="project-title">Project Name #3</h3>
-                <p class="project-category">Web design</p>
+                <h3 class="project-title">Turtle Robotics — Autonomous Vehicle</h3>
+                <p class="project-category">Robotics</p>
               </a>
             </li>
 
-            <li class="project-item active" data-filter-item data-category="applications"
-                data-project-title="Project Name #4"
-                data-project-description="Describe what this application does. What technologies did you use? Who is the target audience?"
-                data-project-tech="Python, Flask, SQLite"
+            <li class="project-item active" data-filter-item data-category="robotics"
+                data-project-title="Robotics Sensor Integration"
+                data-project-description="Developed and integrated sensor systems for autonomous navigation on the Turtle Robotics Hatchling competition vehicle. Included calibrating sensors, writing driver code, and testing real-world performance on competition course environments."
+                data-project-tech="Arduino, Raspberry Pi, Ultrasonic Sensors, Python"
                 data-project-link="#">
               <a href="#">
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
-                  <img src="./assets/images/project-4.png" alt="Project Name #4" loading="lazy">
+                  <img src="./assets/images/project-4.png" alt="Robotics Sensor Integration" loading="lazy">
                 </figure>
-                <h3 class="project-title">Project Name #4</h3>
-                <p class="project-category">Applications</p>
+                <h3 class="project-title">Robotics Sensor Integration</h3>
+                <p class="project-category">Robotics</p>
+              </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="cad & fabrication"
+                data-project-title="SolidWorks CAD Designs"
+                data-project-description="A collection of CAD designs created using SolidWorks as part of coursework and project work with TRED. Includes part modeling, assembly design, and technical drawings developed to engineering standards."
+                data-project-tech="SolidWorks, CAD Modeling, Technical Drawing, GD&T"
+                data-project-link="#">
+              <a href="#">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/project-5.png" alt="SolidWorks CAD Designs" loading="lazy">
+                </figure>
+                <h3 class="project-title">SolidWorks CAD Designs</h3>
+                <p class="project-category">CAD & Fabrication</p>
+              </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="cad & fabrication"
+                data-project-title="CNC Machining & Precision Parts"
+                data-project-description="Fabricated precision components using CNC machining as part of work with the Texas A&M Rocket Engine Design Team. Developed skills in machine setup, toolpath planning, material selection, and quality inspection to produce parts to tight tolerances."
+                data-project-tech="CNC Machining, 3D Printing, Metrology, SolidWorks"
+                data-project-link="#">
+              <a href="#">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/project-6.png" alt="CNC Machining and Precision Parts" loading="lazy">
+                </figure>
+                <h3 class="project-title">CNC Machining & Precision Parts</h3>
+                <p class="project-category">CAD & Fabrication</p>
+              </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="programming"
+                data-project-title="Python Data Analysis Scripts"
+                data-project-description="Developed Python scripts for engineering data analysis, including processing sensor output, generating plots, and automating repetitive calculations. Used in support of thermal analysis research and robotics sensor testing."
+                data-project-tech="Python, NumPy, Matplotlib, Data Analysis"
+                data-project-link="#">
+              <a href="#">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/project-7.png" alt="Python Data Analysis Scripts" loading="lazy">
+                </figure>
+                <h3 class="project-title">Python Data Analysis Scripts</h3>
+                <p class="project-category">Programming</p>
+              </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="programming"
+                data-project-title="Embedded Systems Firmware"
+                data-project-description="Wrote firmware for Arduino and Raspberry Pi microcontrollers used in the Turtle Robotics autonomous vehicle project. Implemented motor control loops, sensor polling routines, and decision logic for obstacle avoidance and path following."
+                data-project-tech="C/C++, Arduino IDE, Raspberry Pi, Embedded Linux"
+                data-project-link="#">
+              <a href="#">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/project-8.jpg" alt="Embedded Systems Firmware" loading="lazy">
+                </figure>
+                <h3 class="project-title">Embedded Systems Firmware</h3>
+                <p class="project-category">Programming</p>
+              </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="cad & fabrication"
+                data-project-title="3D Printed Silicone Mold System"
+                data-project-description="Designed and fabricated a 3D-printed mold system used to cast ablative silicone linings for the Elysium 2 rocket engine combustion chamber. Required precision tolerancing to ensure proper fit and thermal performance, iterating through multiple design revisions to achieve the required surface finish and dimensional accuracy."
+                data-project-tech="SolidWorks, FDM 3D Printing, Silicone Casting, Iteration"
+                data-project-link="#">
+              <a href="#">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/project-9.png" alt="3D Printed Silicone Mold System" loading="lazy">
+                </figure>
+                <h3 class="project-title">3D Printed Silicone Mold System</h3>
+                <p class="project-category">CAD & Fabrication</p>
               </a>
             </li>
 
           </ul>
+          
 
         </section>
 
