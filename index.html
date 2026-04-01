@@ -18,7 +18,6 @@
       display: flex;
       flex-direction: column;
       gap: 28px;
-      margin-top: 16px;
     }
 
     .gallery-item {
@@ -36,14 +35,14 @@
 
     .gallery-item-caption {
       font-size: 14px;
-      color: var(--light-gray, #ccc);
+      color: var(--light-gray);
       line-height: 1.6;
       padding: 0 2px;
     }
 
     .gallery-item-caption strong {
       display: block;
-      color: var(--white-2, #fff);
+      color: var(--white-2);
       font-size: 13px;
       text-transform: uppercase;
       letter-spacing: 0.5px;
@@ -54,16 +53,6 @@
       border: none;
       border-top: 1px solid rgba(255,255,255,0.08);
       margin: 0;
-    }
-
-    .project-modal-body {
-      overflow-y: auto;
-      max-height: 70vh;
-      padding-right: 4px;
-    }
-
-    .project-modal-details {
-      margin-top: 20px;
     }
   </style>
 </head>
@@ -210,7 +199,6 @@
                 <img src="./assets/images/icon-design.svg" alt="design icon" width="40">
               </div>
               <div class="service-content-box">
-                <!-- TYPO FIXED: "Maching" → "Machining" -->
                 <h4 class="h4 service-item-title">Machining & Fabrication</h4>
                 <p class="service-item-text">
                   Learning fabrication and design skills through my work with the Texas A&M Rocket Engine 
@@ -329,10 +317,10 @@
               <span>2021 — 2025</span>
               <p class="timeline-text">
                 Served as Varsity Tennis Captain, leading the team to back-to-back State Championship 
-                appearances. Beyond athletics, I held leadership 
-                roles as a Kairos Retreat Leader, guiding peers through personal development and reflection. 
-                My academic commitment was recognized through active membership in Mu Alpha Theta 
-                and the National Honor Society, graduating top 10% of my class.
+                appearances. Beyond athletics, I held leadership roles as a Kairos Retreat Leader, 
+                guiding peers through personal development and reflection. My academic commitment was 
+                recognized through active membership in Mu Alpha Theta and the National Honor Society, 
+                graduating top 10% of my class.
               </p>
             </li>
           </ol>
@@ -351,11 +339,11 @@
               <span>September 2025 — Present</span>
               <p class="timeline-text">
                 Leading community-focused initiatives through diverse service projects. I actively 
-                participate in The Big Event, the nation's largest one-day student-run service 
-                project, and maintain local infrastructure through the Adopt-A-Street program. 
-                Additionally, I coordinate hands-on service events, such as fabricating donated 
-                pet toys for local shelters, and represent the College of Engineering during Aggie 
-                Saturday, providing guided tours and insights to prospective engineering students.
+                participate in The Big Event, the nation's largest one-day student-run service project, 
+                and maintain local infrastructure through the Adopt-A-Street program. Additionally, I 
+                coordinate hands-on service events, such as fabricating donated pet toys for local 
+                shelters, and represent the College of Engineering during Aggie Saturday, providing 
+                guided tours and insights to prospective engineering students.
               </p>
             </li>
             <li class="timeline-item">
@@ -374,28 +362,31 @@
               <h4 class="h4 timeline-item-title">Turtle Robotics Hatchling</h4>
               <span>January 2025 — Present</span>
               <p class="timeline-text">
-                Learning fundamental robotics concepts and programming skills through hands-on experience with the
-                Turtle Robotics Hatchling team. I am involved in designing and building small-scale autonomous
-                vehicles, gaining proficiency in Arduino programming and sensor integration. This role has provided me with a 
-                strong foundation in embedded systems and sparked my interest in robotics competitions, where I have 
-                contributed to the development of our team's entry for the upcoming season.
+                Learning fundamental robotics concepts and programming skills through hands-on experience 
+                with the Turtle Robotics Hatchling team. I am involved in designing and building 
+                small-scale autonomous vehicles, gaining proficiency in Arduino programming and sensor 
+                integration. This role has provided me with a strong foundation in embedded systems and 
+                sparked my interest in robotics competitions.
               </p>
             </li>
             <li class="timeline-item">
               <h4 class="h4 timeline-item-title">Chicken N' Pickle - Server</h4>
               <span>April 2025 — August 2025</span>
               <p class="timeline-text">
-                Managed high-volume customer service operations in a fast-paced restaurant environment, consistently delivering
-                exceptional dining experiences. I honed my communication and teamwork skills while coordinating with kitchen staff to
-                ensure timely and accurate order fulfillment. This role taught me the importance of adaptability and customer satisfaction, as I navigated diverse situations and resolved issues efficiently.
+                Managed high-volume customer service operations in a fast-paced restaurant environment, 
+                consistently delivering exceptional dining experiences. I honed my communication and 
+                teamwork skills while coordinating with kitchen staff to ensure timely and accurate order 
+                fulfillment.
               </p>
             </li>
             <li class="timeline-item">
               <h4 class="h4 timeline-item-title">Potbelly Associate</h4>
               <span>September 2023 — October 2024</span>
               <p class="timeline-text">
-                Provided excellent customer service in a fast-paced sandwich shop, consistently exceeding sales targets and earning recognition for outstanding performance. I developed strong interpersonal skills while engaging with customers and collaborating with team members to maintain a positive work environment. This experience taught me the value of hard work, 
-                attention to detail, and effective communication in a customer-facing role. 
+                Provided excellent customer service in a fast-paced sandwich shop, consistently exceeding 
+                sales targets and earning recognition for outstanding performance. Developed strong 
+                interpersonal skills while engaging with customers and collaborating with team members to 
+                maintain a positive work environment.
               </p>
             </li>
           </ol>
@@ -489,21 +480,20 @@
           <ul class="project-list">
 
             <!-- ═══════════════════════════════════════════════════════
-                 HOW TO ADD PROGRESS GALLERY IMAGES TO A PROJECT:
+                 HOW TO ADD A PROGRESS GALLERY TO A PROJECT:
 
-                 Add a data-project-gallery attribute as a JSON array.
-                 Each item has "src", "caption", and optional "label".
+                 Add data-project-gallery as a JSON array on the <li>.
+                 Each entry needs "src", "label", and "caption".
+
                  Example:
                    data-project-gallery='[
-                     {"src":"./assets/images/step1.png","label":"Step 1","caption":"Description of this step."},
-                     {"src":"./assets/images/step2.png","label":"Step 2","caption":"Description of this step."}
+                     {"src":"./assets/images/step1.png","label":"Step 1","caption":"What happened here."},
+                     {"src":"./assets/images/step2.png","label":"Step 2","caption":"What happened next."}
                    ]'
 
-                 If data-project-gallery is present, the modal will show
-                 the full scrollable gallery instead of a single image.
+                 Projects WITHOUT this attribute show a single image as normal.
                  ═══════════════════════════════════════════════════════ -->
 
-            <!-- ELYSIUM 2 — example with gallery -->
             <li class="project-item active" data-filter-item data-category="rocket engineering"
                 data-project-title="Elysium 2 — Combustion Chamber"
                 data-project-description="Contributing to the development of the Elysium 2 liquid rocket engine as part of the Texas A&M Rocket Engine Design Team (TRED). Specialized in combustion chamber integrity and thermal management, fabricating high-precision 3D-printed silicone molds used to cast ablative linings capable of withstanding combustion temperatures of ~3000 K."
@@ -667,16 +657,14 @@
               <!-- Gallery (shown when project has data-project-gallery) -->
               <div class="project-modal-gallery" data-project-modal-gallery style="display:none;"></div>
 
-              <!-- Single image fallback (shown when no gallery) -->
+              <!-- Single image fallback -->
               <div class="project-modal-img-wrapper" data-project-modal-img-wrapper>
                 <img src="" alt="" data-project-modal-img>
               </div>
 
               <div class="project-modal-details">
                 <h4 class="h4">About This Project</h4>
-                <p class="project-modal-description" data-project-modal-description>
-                  Project description appears here.
-                </p>
+                <p class="project-modal-description" data-project-modal-description></p>
 
                 <h4 class="h4">Technologies Used</h4>
                 <div class="project-modal-tech" data-project-modal-tech></div>
@@ -697,103 +685,7 @@
 
   </main>
 
-
   <script src="./assets/js/script.js"></script>
-
-  <!-- Gallery modal logic -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const projectItems = document.querySelectorAll('.project-item');
-      const modalContainer = document.querySelector('[data-project-modal-container]');
-      const overlay = document.querySelector('[data-project-overlay]');
-      const closeBtn = document.querySelector('[data-project-modal-close]');
-      const modalTitle = document.querySelector('[data-project-modal-title]');
-      const modalDescription = document.querySelector('[data-project-modal-description]');
-      const modalTech = document.querySelector('[data-project-modal-tech]');
-      const modalLink = document.querySelector('[data-project-modal-link]');
-      const modalImgWrapper = document.querySelector('[data-project-modal-img-wrapper]');
-      const modalImg = document.querySelector('[data-project-modal-img]');
-      const modalGallery = document.querySelector('[data-project-modal-gallery]');
-
-      function openModal(item) {
-        const title = item.dataset.projectTitle || '';
-        const description = item.dataset.projectDescription || '';
-        const tech = item.dataset.projectTech || '';
-        const link = item.dataset.projectLink || '#';
-        const galleryData = item.dataset.projectGallery || '';
-        const thumbImg = item.querySelector('.project-img img');
-
-        modalTitle.textContent = title;
-        modalDescription.textContent = description;
-        modalLink.href = link;
-
-        // Tech tags
-        modalTech.innerHTML = '';
-        tech.split(',').forEach(t => {
-          const tag = document.createElement('span');
-          tag.textContent = t.trim();
-          tag.style.cssText = 'display:inline-block;background:rgba(255,255,255,0.08);border-radius:6px;padding:3px 10px;margin:3px 3px 3px 0;font-size:13px;';
-          modalTech.appendChild(tag);
-        });
-
-        // Gallery or single image
-        if (galleryData) {
-          let gallery = [];
-          try { gallery = JSON.parse(galleryData); } catch(e) {}
-
-          if (gallery.length > 0) {
-            modalGallery.innerHTML = '';
-            gallery.forEach((item, index) => {
-              if (index > 0) {
-                const hr = document.createElement('hr');
-                hr.className = 'gallery-divider';
-                modalGallery.appendChild(hr);
-              }
-              const div = document.createElement('div');
-              div.className = 'gallery-item';
-              div.innerHTML = `
-                <img src="${item.src}" alt="${item.label || ''}">
-                <p class="gallery-item-caption">
-                  ${item.label ? `<strong>${item.label}</strong>` : ''}
-                  ${item.caption || ''}
-                </p>
-              `;
-              modalGallery.appendChild(div);
-            });
-            modalGallery.style.display = 'flex';
-            modalImgWrapper.style.display = 'none';
-          }
-        } else {
-          // Single image fallback
-          modalImg.src = thumbImg ? thumbImg.src : '';
-          modalImg.alt = title;
-          modalImgWrapper.style.display = 'block';
-          modalGallery.style.display = 'none';
-        }
-
-        modalContainer.classList.add('active');
-        document.body.style.overflow = 'hidden';
-      }
-
-      function closeModal() {
-        modalContainer.classList.remove('active');
-        document.body.style.overflow = '';
-        // Reset scroll
-        document.querySelector('.project-modal-body').scrollTop = 0;
-      }
-
-      projectItems.forEach(item => {
-        item.querySelector('a').addEventListener('click', function (e) {
-          e.preventDefault();
-          openModal(item);
-        });
-      });
-
-      closeBtn.addEventListener('click', closeModal);
-      overlay.addEventListener('click', closeModal);
-    });
-  </script>
-
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 

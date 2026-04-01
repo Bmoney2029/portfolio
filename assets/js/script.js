@@ -2,9 +2,6 @@
 
 // ============================================================
 //  PORTFOLIO TEMPLATE — JavaScript
-//  This file powers all the interactive features on your site.
-//  You do NOT need to edit this file to customize your portfolio.
-//  All your changes should be made in index.html only.
 // ============================================================
 
 
@@ -20,8 +17,6 @@ const elementToggleFunc = function (elem) {
 
 // -----------------------------------------------------------
 //  SIDEBAR TOGGLE (mobile only)
-//  On small screens, the sidebar collapses. The "Show Contacts"
-//  button expands/collapses it.
 // -----------------------------------------------------------
 const sidebar = document.querySelector("[data-sidebar]");
 const sidebarBtn = document.querySelector("[data-sidebar-btn]");
@@ -34,8 +29,6 @@ sidebarBtn.addEventListener("click", function () {
 
 // -----------------------------------------------------------
 //  TESTIMONIALS MODAL
-//  When you click a testimonial card, a popup appears with
-//  the full testimonial text.
 // -----------------------------------------------------------
 const testimonialsItem = document.querySelectorAll("[data-testimonials-item]");
 const modalContainer = document.querySelector("[data-modal-container]");
@@ -46,13 +39,11 @@ const modalImg = document.querySelector("[data-modal-img]");
 const modalTitle = document.querySelector("[data-modal-title]");
 const modalText = document.querySelector("[data-modal-text]");
 
-// Open/close the testimonial modal
 const testimonialsModalFunc = function () {
   modalContainer.classList.toggle("active");
   overlay.classList.toggle("active");
 }
 
-// Clicking a testimonial card fills the modal with that card's data
 for (let i = 0; i < testimonialsItem.length; i++) {
   testimonialsItem[i].addEventListener("click", function () {
     modalImg.src = this.querySelector("[data-testimonials-avatar]").src;
@@ -63,29 +54,23 @@ for (let i = 0; i < testimonialsItem.length; i++) {
   });
 }
 
-// Close modal when clicking X or clicking outside
 modalCloseBtn.addEventListener("click", testimonialsModalFunc);
 overlay.addEventListener("click", testimonialsModalFunc);
 
 
 
 // -----------------------------------------------------------
-//  PORTFOLIO FILTER (categories)
-//  Lets visitors filter projects by category (e.g. "Web design",
-//  "Applications", etc.). Works on both mobile dropdown and
-//  desktop button bar.
+//  PORTFOLIO FILTER
 // -----------------------------------------------------------
 const select = document.querySelector("[data-select]");
 const selectItems = document.querySelectorAll("[data-select-item]");
 const selectValue = document.querySelector("[data-selecct-value]");
 const filterBtn = document.querySelectorAll("[data-filter-btn]");
 
-// Toggle the mobile dropdown open/closed
 select.addEventListener("click", function () {
   elementToggleFunc(this);
 });
 
-// When a mobile dropdown option is clicked
 for (let i = 0; i < selectItems.length; i++) {
   selectItems[i].addEventListener("click", function () {
     let selectedValue = this.innerText.toLowerCase();
@@ -95,7 +80,6 @@ for (let i = 0; i < selectItems.length; i++) {
   });
 }
 
-// The actual filtering logic — shows/hides projects based on category
 const filterItems = document.querySelectorAll("[data-filter-item]");
 
 const filterFunc = function (selectedValue) {
@@ -110,7 +94,6 @@ const filterFunc = function (selectedValue) {
   }
 }
 
-// Desktop filter buttons
 let lastClickedBtn = filterBtn[0];
 
 for (let i = 0; i < filterBtn.length; i++) {
@@ -128,15 +111,9 @@ for (let i = 0; i < filterBtn.length; i++) {
 
 
 // -----------------------------------------------------------
-//  PROJECT DETAIL MODAL (popup)
-//  When you click a project card, a popup appears showing:
-//  - The project image (larger)
-//  - A detailed description
-//  - Technologies used (as tags)
-//  - A link to view the project
-//
-//  All data comes from the data-project-* attributes you set
-//  on each <li class="project-item"> in index.html.
+//  PROJECT DETAIL MODAL
+//  Supports a scrollable progress gallery if the project has
+//  a data-project-gallery attribute (JSON array).
 // -----------------------------------------------------------
 const projectModalContainer = document.querySelector("[data-project-modal-container]");
 const projectModalClose = document.querySelector("[data-project-modal-close]");
@@ -146,40 +123,36 @@ const projectModalImg = document.querySelector("[data-project-modal-img]");
 const projectModalDescription = document.querySelector("[data-project-modal-description]");
 const projectModalTech = document.querySelector("[data-project-modal-tech]");
 const projectModalLink = document.querySelector("[data-project-modal-link]");
+const projectModalImgWrapper = document.querySelector("[data-project-modal-img-wrapper]");
+const projectModalGallery = document.querySelector("[data-project-modal-gallery]");
 
-// Open/close the project modal
 const projectModalFunc = function () {
   projectModalContainer.classList.toggle("active");
   projectOverlay.classList.toggle("active");
 }
 
-// Clicking a project card opens the detail popup
 const projectItems = document.querySelectorAll("[data-filter-item]");
 
 for (let i = 0; i < projectItems.length; i++) {
 
   projectItems[i].addEventListener("click", function (e) {
-    // Prevent the default link behavior (the <a href="#">)
     e.preventDefault();
 
-    // Read the data attributes from the clicked project
     const title = this.dataset.projectTitle;
     const description = this.dataset.projectDescription;
     const tech = this.dataset.projectTech;
     const link = this.dataset.projectLink;
+    const galleryData = this.dataset.projectGallery;
     const imgElement = this.querySelector(".project-img img");
 
-    // Fill the modal with project data
+    // Fill in title and description
     projectModalTitle.textContent = title;
     projectModalDescription.textContent = description;
-    projectModalImg.src = imgElement.src;
-    projectModalImg.alt = title;
 
-    // Create tech tags from the comma-separated string
+    // Tech tags
     projectModalTech.innerHTML = "";
     if (tech) {
-      const techArray = tech.split(",").map(function(t) { return t.trim(); });
-      techArray.forEach(function(techName) {
+      tech.split(",").map(function(t) { return t.trim(); }).forEach(function(techName) {
         const tag = document.createElement("span");
         tag.className = "tech-tag";
         tag.textContent = techName;
@@ -187,7 +160,7 @@ for (let i = 0; i < projectItems.length; i++) {
       });
     }
 
-    // Set the project link (hide button if link is "#" or empty)
+    // Project link
     if (link && link !== "#") {
       projectModalLink.href = link;
       projectModalLink.style.display = "flex";
@@ -195,12 +168,47 @@ for (let i = 0; i < projectItems.length; i++) {
       projectModalLink.style.display = "none";
     }
 
-    // Open the modal
+    // Gallery or single image
+    if (galleryData) {
+      let gallery = [];
+      try { gallery = JSON.parse(galleryData); } catch(e) {}
+
+      if (gallery.length > 0) {
+        // Build the gallery
+        projectModalGallery.innerHTML = "";
+        gallery.forEach(function(item, index) {
+          if (index > 0) {
+            const hr = document.createElement("hr");
+            hr.className = "gallery-divider";
+            projectModalGallery.appendChild(hr);
+          }
+          const div = document.createElement("div");
+          div.className = "gallery-item";
+          div.innerHTML =
+            '<img src="' + item.src + '" alt="' + (item.label || '') + '">' +
+            '<p class="gallery-item-caption">' +
+              (item.label ? '<strong>' + item.label + '</strong>' : '') +
+              (item.caption || '') +
+            '</p>';
+          projectModalGallery.appendChild(div);
+        });
+        projectModalGallery.style.display = "flex";
+        projectModalImgWrapper.style.display = "none";
+      }
+    } else {
+      // Single image fallback
+      projectModalImg.src = imgElement ? imgElement.src : "";
+      projectModalImg.alt = title;
+      projectModalImgWrapper.style.display = "block";
+      projectModalGallery.style.display = "none";
+    }
+
+    // Reset scroll position and open
+    projectModalContainer.querySelector(".project-modal-body").scrollTop = 0;
     projectModalFunc();
   });
 }
 
-// Close project modal when clicking X or clicking outside
 projectModalClose.addEventListener("click", projectModalFunc);
 projectOverlay.addEventListener("click", projectModalFunc);
 
@@ -208,8 +216,6 @@ projectOverlay.addEventListener("click", projectModalFunc);
 
 // -----------------------------------------------------------
 //  PAGE NAVIGATION
-//  Switches between About, Resume, and Portfolio pages
-//  when you click the nav links at the top/bottom.
 // -----------------------------------------------------------
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
