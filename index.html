@@ -131,6 +131,7 @@
 
         <div class="separator"></div>
 
+        <!-- LinkedIn only -->
         <ul class="social-list">
           <li class="social-item">
             <a href="https://www.linkedin.com/in/braden-gallagher" class="social-link" target="_blank" rel="noopener noreferrer">
@@ -483,14 +484,12 @@
 
                  Add data-project-gallery as a JSON array on the <li>.
                  Each entry needs "src", "label", and "caption".
-                 IMPORTANT: data-project-gallery must be BEFORE the closing >
-                 and every } except the last needs a comma after it.
 
                  Example:
                    data-project-gallery='[
                      {"src":"./assets/images/step1.png","label":"Step 1","caption":"What happened here."},
                      {"src":"./assets/images/step2.png","label":"Step 2","caption":"What happened next."}
-                   ]'>
+                   ]'
 
                  Projects WITHOUT this attribute show a single image as normal.
                  ═══════════════════════════════════════════════════════ -->
@@ -518,12 +517,12 @@
 
             <li class="project-item active" data-filter-item data-category="rocket engineering"
                 data-project-title="Ablative Dog Bone Tensile Strength Testing"
-                data-project-description="Manufactured and tested the ablative that will be used for our Elysium 2 and Icarus combustion chambers."
+                data-project-description="Manufactured and tested the ablative that will be used for our Elysium 2 and Icarus combustion chambes."
                 data-project-tech="SolidWorks, Manual Mill, Band Saw, Belt Sander"
-                data-project-link="#"
+                data-project-link="#">
                 data-project-gallery='[
-                  {"src":"./assets/images/DogBoneDrawing-1.png","label":"Aluminum Dog Bone Mold Drawing","caption":"Designed an aluminum dog bone mold that would allow us to cast ablative dog bones for tensile strength testing."},
-                  {"src":"./assets/images/dogBone.png","label":"Manufactured Aluminum Dog Bone","caption":"Tested different ways to manufacture the aluminum dog bones, utilizing the rotating chuck vice grip on the manual mill to get the angles."},
+                  {"src":"./assets/images/DogBoneDrawing-1.png","label":"Aluminum Dog Bone Mold Drawing","caption":"Desinged an aluminum dog bone mold that would allow us to cast ablative dog bones for tensile strenght testing."},
+                  {"src":"./assets/images/dogBone.png","label":"Manufactured Aluminum Dog Bone","caption":"Tested different ways to manufacture the aluminum dog bones, utilizing the rotating chuck vice grip on the manual mill to get the angles."}
                   {"src":"./assets/images/AblativeTensileTesting.png","label":"Ablative Tensile Strength Testing","caption":"Tested the tensile strength of the ablative material using the aluminum dog bone molds."}
                 ]'>
               <a href="#">
@@ -531,9 +530,9 @@
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
-                  <img src="./assets/images/dogBone.png" alt="Ablative Dog Bone Tensile Strength Testing" loading="lazy">
+                  <img src="./assets/images/dogBone.png" alt="Aluminum Dog Bone Mold" loading="lazy">
                 </figure>
-                <h3 class="project-title">Ablative Dog Bone Tensile Strength Testing</h3>
+                <h3 class="project-title">Aluminum Dog Bone Mold</h3>
                 <p class="project-category">Rocket Engineering</p>
               </a>
             </li>
@@ -542,13 +541,13 @@
                 data-project-title="Torch Igniter Fabrication"
                 data-project-description="Manufactured the steel torch igniter for the Elysium 2 rocket engine, using the lathe and mill. Learning the importance of feed speed and bit quality. This coming week I will be TIG welding the injector cap to the combustion chamber body."
                 data-project-tech="Mill, Lathe, TIG Welding, Steel Fabrication"
-                data-project-link="#"
+                data-project-link="#">
                 data-project-gallery='[
-                  {"src":"./assets/images/TorchDrawing.png","label":"Torch Igniter Design","caption":"Torch Igniter designed to begin combustion for our regeneratively cooled rocket engine, Ragnarok."},
-                  {"src":"./assets/images/torchigniter.png","label":"Basic Body and Cap","caption":"Manufactured the basic body and cap of the igniter."},
-                  {"src":"./assets/images/stage2Torch.png","label":"Progress","caption":"Continued progress."},
-                  {"src":"./assets/images/stage3Torch.png","label":"Welded","caption":"Machined cap cheeks and TIG welded it onto the body."},
-                  {"src":"./assets/images/TorchInjectorWelds.png","label":"Injector Welds","caption":"Welded the injector caps on."}
+                  {"src":"./assets/images/TorchDrawing.png","label":"Torch Igniter Design","caption":"Torch Igniter Designed to begin combustion for our regenratively coooled rocket engine, Ragnarok"},
+                  {"src":"./assets/images/torchigniter.png","label":"Basic Body and Cap","caption":"Manufactured the basic body and cap of the igniter"}
+                  {"src":"./assets/images/stage2Torch.png","label":"Progress","caption":"Continued Progress"}
+                  {"src":"./assets/images/stage3Torch.png","label":"Welded","caption":"Machined cap cheeks and TIG welded it onto the body."}
+                  {"src":"./assets/images/TorchInjectorWelds.png","label":"Progress","caption":"Welded the injector caps on."}
                 ]'>
               <a href="#">
                 <figure class="project-img">
@@ -563,18 +562,22 @@
             </li>
 
             <li class="project-item active" data-filter-item data-category="rocket engineering"
-                data-project-title="Final Ablative Mold"
-                data-project-description="Designed and 3D printed a PLA mold that casted our silicone mold for the final pour of the ablative into the combustion chamber. Calculated the area of the ablative that would be poured and decided how much we needed to make."
-                data-project-tech="SolidWorks, 3D Printing, Analysis"
+                data-project-title="Torch Igniter Test Stand"
+                data-project-description="I designed and manufactured a test stand for our torch igniter, which will be used to validate the igniter design"
+                data-project-tech="Onshape, Manual Mill, Bandsaw, TIG Welding"
                 data-project-link="#">
+                data-project-gallery='[
+                  {"src":"./assets/images/TestStandDesign.png","label":"CAD Design","caption":"Initial CAD model of the combustion chamber designed in Onshape, defining the internal geometry and ablative lining dimensions."},
+                  {"src":"./assets/images/TorchTestStand.png","label":"Test Stand","caption":"Bones of the test stand for the torch igniter."}
+                ]'>
               <a href="#">
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
-                  <img src="./assets/images/siliconemold.png" alt="Final Ablative Mold" loading="lazy">
+                  <img src="./assets/images/TestStandDesign.png" alt="Final Ablative Mold" loading="lazy">
                 </figure>
-                <h3 class="project-title">Final Ablative Mold</h3>
+                <h3 class="project-title">Torch Igniter Test Stand</h3>
                 <p class="project-category">Rocket Engineering</p>
               </a>
             </li>
@@ -584,12 +587,16 @@
                 data-project-description="Utilized SolidWorks to rapidly iterate design on the conveyor belt mechanism of the robot, optimizing for dimensions and reliability. Design in progress."
                 data-project-tech="SolidWorks, Iterative Development, 3D Printing"
                 data-project-link="#">
+                data-project-gallery='[
+                  {"src":"./assets/images/RobotDesign.png","label":"CAD Design","caption":"Initial CAD model of the combustion chamber designed in Onshape, defining the internal geometry and ablative lining dimensions."},
+                  {"src":"./assets/images/3dPrintedChain.png","label":"3D-Printed Chain","caption":"3D-printed PLA chain used as a proof of concept for the conveyor belt mechanism."}
+                ]'>
               <a href="#">
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
-                  <img src="./assets/images/conveyor.png" alt="Turtle Robotics Autonomous Vehicle" loading="lazy">
+                  <img src="./assets/images/RobotDesign.png" alt="Turtle Robotics Autonomous Vehicle" loading="lazy">
                 </figure>
                 <h3 class="project-title">Turtle Robotics — Vehicle Design</h3>
                 <p class="project-category">Robotics</p>
@@ -597,10 +604,16 @@
             </li>
 
             <li class="project-item active" data-filter-item data-category="cad & fabrication"
-                data-project-title="Intro to MIG Welding"
-                data-project-description="Completed hands-on MIG welding training, learning proper technique, machine setup, and safety protocols. Practiced on mild steel, developing consistent bead control and understanding wire feed speed, voltage settings, and shielding gas selection. This foundational skill directly supports fabrication work on the TRED rocket engine components."
-                data-project-tech="MIG Welding, Safety Equipment, Mild Steel"
+                data-project-title="FEDC Manufacturing Pop-Up Classes"
+                data-project-description="Completed hands on training for the manual lathe, mill, and MIG/TIG welding at the Fabrication Education and Development Center (FEDC) on the Texas A&M campus. These classes provided foundational skills in machining and welding that I have applied to my work with the Texas A&M Rocket Engine Design Team (TRED)."
+                data-project-tech="Mill, Lathe, MIG Welding, TIG Welding, Steel & Aluminum Fabrication"
                 data-project-link="#">
+                data-project-gallery='[
+                  {"src":"./assets/images/Lathe.png","label":"Lathe Pop Up","caption":"Given a design, meant to show how to use all the tools/features on the lathe."},
+                  {"src":"./assets/images/millTraining.png","label":"Mill Training","caption":"Practiced on the manual mill, learning proper technique, machine setup, and safety protocols."}
+                  {"src":"./assets/images/TIG.png","label":"TIG Welding","caption":"Practiced TIG welding techniques, focusing on precision and control."}
+                  {"src":"./assets/images/MIG.png","label":"MIG Welding","caption":"Practiced MIG welding techniques, focusing on consistency and control."}
+                ]'>
               <a href="#">
                 <figure class="project-img">
                   <div class="project-item-icon-box">
