@@ -5,48 +5,73 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- ============================================================
-       STEP 1: Change your page title below
-       This shows up in the browser tab
-       ============================================================ -->
-  <title>Your Name — Portfolio</title>
-
-  <!-- Favicon — replace ./assets/images/logo.ico with your own icon -->
+  <title>Braden Gallagher — Portfolio</title>
   <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
-
-  <!-- Stylesheet (don't change this) -->
   <link rel="stylesheet" href="./assets/css/style.css">
-
-  <!-- Google Fonts (don't change this) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* ── Gallery Modal Styles ── */
+    .project-modal-gallery {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    .gallery-item {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+      max-height: 340px;
+    }
+
+    .gallery-item-caption {
+      font-size: 14px;
+      color: var(--light-gray);
+      line-height: 1.6;
+      padding: 0 2px;
+    }
+
+    .gallery-item-caption strong {
+      display: block;
+      color: var(--white-2);
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
+    }
+
+    .gallery-divider {
+      border: none;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      margin: 0;
+    }
+  </style>
 </head>
 
 <body>
 
   <main>
 
-    <!-- ===========================================================
-         SIDEBAR — Your personal info card
-         =========================================================== -->
     <aside class="sidebar" data-sidebar>
 
       <div class="sidebar-info">
 
-        <!-- STEP 2: Replace the avatar image
-             Put your photo in ./assets/images/ and update the src below -->
         <figure class="avatar-box">
-          <img src="./assets/images/my-avatar.png" alt="Your Name" width="80">
+          <img src="./assets/images/my-avatar.png" alt="Braden Gallagher" width="80">
         </figure>
 
         <div class="info-content">
-          <!-- STEP 3: Replace with YOUR name -->
-          <h1 class="name" title="Your Name">Your Name</h1>
-
-          <!-- STEP 4: Replace with YOUR title/role (e.g. "CS Student", "Designer", "Engineer") -->
-          <p class="title">Your Title Here</p>
+          <h1 class="name" title="Braden Gallagher">Braden Gallagher</h1>
+          <p class="title">General Engineer</p>
         </div>
 
         <button class="info_more-btn" data-sidebar-btn>
@@ -62,47 +87,43 @@
 
         <ul class="contacts-list">
 
-          <!-- STEP 5: Replace with YOUR email address (in both the href and the text) -->
           <li class="contact-item">
             <div class="icon-box">
               <ion-icon name="mail-outline"></ion-icon>
             </div>
             <div class="contact-info">
               <p class="contact-title">Email</p>
-              <a href="mailto:your.email@example.com" class="contact-link">your.email@example.com</a>
+              <a href="mailto:bradengallagher@tamu.edu" class="contact-link">bradengallagher@tamu.edu</a>
             </div>
           </li>
 
-          <!-- STEP 6: Replace with YOUR phone number (or delete this whole <li> block if you don't want it) -->
           <li class="contact-item">
             <div class="icon-box">
               <ion-icon name="phone-portrait-outline"></ion-icon>
             </div>
             <div class="contact-info">
               <p class="contact-title">Phone</p>
-              <a href="tel:+10000000000" class="contact-link">+1 (000) 000-0000</a>
+              <a href="tel:+14696677917" class="contact-link">+1 (469) 667-7917</a>
             </div>
           </li>
 
-          <!-- STEP 7: Replace with YOUR birthday (or delete this whole <li> block) -->
           <li class="contact-item">
             <div class="icon-box">
               <ion-icon name="calendar-outline"></ion-icon>
             </div>
             <div class="contact-info">
               <p class="contact-title">Birthday</p>
-              <time datetime="2000-01-01">January 1, 2000</time>
+              <time datetime="2006-09-06">September 6, 2006</time>
             </div>
           </li>
 
-          <!-- STEP 8: Replace with YOUR location -->
           <li class="contact-item">
             <div class="icon-box">
               <ion-icon name="location-outline"></ion-icon>
             </div>
             <div class="contact-info">
               <p class="contact-title">Location</p>
-              <address>Your City, State</address>
+              <address>College Station, TX</address>
             </div>
           </li>
 
@@ -110,30 +131,13 @@
 
         <div class="separator"></div>
 
-        <!-- STEP 9: Replace "#" with your actual social media profile links
-             To add more socials, copy one <li> block and change the icon name.
-             Icon names: logo-github, logo-linkedin, logo-facebook, logo-twitter, logo-instagram, logo-youtube
-             Full icon list: https://ionic.io/ionicons -->
+        <!-- LinkedIn only -->
         <ul class="social-list">
-
           <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-github"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="#" class="social-link">
+            <a href="https://www.linkedin.com/in/braden-gallagher" class="social-link" target="_blank" rel="noopener noreferrer">
               <ion-icon name="logo-linkedin"></ion-icon>
             </a>
           </li>
-
-          <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-instagram"></ion-icon>
-            </a>
-          </li>
-
         </ul>
 
       </div>
@@ -142,61 +146,48 @@
 
 
 
-    <!-- ===========================================================
-         MAIN CONTENT — All the pages of your portfolio
-         =========================================================== -->
     <div class="main-content">
 
-      <!-- Navigation bar (these link to the sections below) -->
       <nav class="navbar">
         <ul class="navbar-list">
-
           <li class="navbar-item">
             <button class="navbar-link active" data-nav-link>About</button>
           </li>
-
           <li class="navbar-item">
             <button class="navbar-link" data-nav-link>Resume</button>
           </li>
-
           <li class="navbar-item">
             <button class="navbar-link" data-nav-link>Portfolio</button>
           </li>
-
         </ul>
       </nav>
 
 
 
-      <!-- ==========================================================
-           ABOUT PAGE
-           ========================================================== -->
+      <!-- ABOUT -->
       <article class="about active" data-page="about">
 
         <header>
           <h2 class="h2 article-title">About me</h2>
         </header>
 
-        <!-- STEP 10: Write your own "About Me" paragraphs below.
-             Tip: Keep it 2-3 short paragraphs. Talk about what you study,
-             what you're passionate about, and what you're looking for. -->
         <section class="about-text">
           <p>
-            Write a short intro about yourself here. Who are you? What do you study?
-            What are you passionate about? This is the first thing visitors see, so make it count!
+            Aspiring Mechanical Engineer at Texas A&M University 
+            (4.0 GPA) interested in rocket propulsion, precision fabrication, 
+            and embedded systems. Through my work with the Texas A&M Rocket Engine 
+            Design Team (TRED) and Turtle Robotics, I am gaining hands on experience in CAD 
+            design, machining, and autonomous vehicle control.
           </p>
-
           <p>
-            Add a second paragraph about your goals, interests, or what makes you unique.
-            Keep it genuine and conversational — this is YOUR story.
+            Contributing to the College Station community through dedicated service and large scale 
+            fundraising. As a member of the Aggie Club of Engineers Service Team, I have helped raise over $5,000 for Camp 
+            Hope (PTSD Foundation of America) and participate in the Adopt-A-Street initiative to 
+            maintain local infrastructure. This experience reinforces my commitment to teamwork and 
+            civic responsibility alongside my technical studies.
           </p>
         </section>
 
-
-        <!-- STEP 11: "What I'm Doing" section
-             Change the titles and descriptions to match YOUR skills/interests.
-             To change an icon, swap the image file in ./assets/images/
-             You can add or remove <li> blocks to show more or fewer items. -->
         <section class="service">
 
           <h3 class="h3 service-title">What I'm doing</h3>
@@ -208,9 +199,10 @@
                 <img src="./assets/images/icon-design.svg" alt="design icon" width="40">
               </div>
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Skill or Interest #1</h4>
+                <h4 class="h4 service-item-title">Machining & Fabrication</h4>
                 <p class="service-item-text">
-                  Describe what you do or are learning. E.g. "Building responsive websites with modern CSS and JavaScript."
+                  Learning fabrication and design skills through my work with the Texas A&M Rocket Engine 
+                  Design Team (TRED). I have experience with CAD software, CNC machining, and 3D printing.
                 </p>
               </div>
             </li>
@@ -220,38 +212,18 @@
                 <img src="./assets/images/icon-dev.svg" alt="development icon" width="40">
               </div>
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Skill or Interest #2</h4>
+                <h4 class="h4 service-item-title">Embedded Systems & Programming</h4>
                 <p class="service-item-text">
-                  Describe another skill or area of focus. E.g. "Developing backend APIs with Python and Flask."
+                  Developing embedded systems and microcontroller programming skills through my work with 
+                  Turtle Robotics. I have experience with Arduino, Raspberry Pi, and C/C++ programming through my organization wide competition.
                 </p>
               </div>
             </li>
-
-            <li class="service-item">
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-app.svg" alt="app icon" width="40">
-              </div>
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Skill or Interest #3</h4>
-                <p class="service-item-text">
-                  One more area you want to highlight. E.g. "Creating mobile-first experiences and prototypes."
-                </p>
-              </div>
-            </li>
-
-            <!-- Want a 4th item? Copy one of the <li> blocks above and paste it here. -->
 
           </ul>
 
         </section>
 
-
-        <!-- STEP 12: Testimonials section
-             These are quotes from people you've worked with (professors, teammates, etc.).
-             Replace the names, images, and text with real testimonials.
-             Put testimonial photos in ./assets/images/ and update the src paths.
-             To ADD a testimonial: copy an entire <li> block and paste below.
-             To REMOVE one: delete the entire <li>...</li> block. -->
         <section class="testimonials">
 
           <h3 class="h3 testimonials-title">Testimonials</h3>
@@ -260,39 +232,30 @@
 
             <li class="testimonials-item">
               <div class="content-card" data-testimonials-item>
-
                 <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-1.png" alt="Person's Name" width="60" data-testimonials-avatar>
+                  <img src="./assets/images/turtlelogo.png" alt="Sir Henry Royce" width="50" data-testimonials-avatar>
                 </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Person's Name</h4>
-
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Sir Henry Royce</h4>
                 <div class="testimonials-text" data-testimonials-text>
                   <p>
-                    Replace this with a real quote or recommendation from someone who's worked with you —
-                    a professor, teammate, client, mentor, etc. Keep it a few sentences long.
+                    The engineer's first problem in any design is to discover 
+                    what the problem really is.
                   </p>
                 </div>
-
               </div>
             </li>
 
             <li class="testimonials-item">
               <div class="content-card" data-testimonials-item>
-
                 <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-2.png" alt="Person's Name" width="60" data-testimonials-avatar>
+                  <img src="./assets/images/REDlogo.png" alt="Elon Musk" width="50" data-testimonials-avatar>
                 </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Another Person</h4>
-
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Elon Musk</h4>
                 <div class="testimonials-text" data-testimonials-text>
                   <p>
-                    Another testimonial goes here. If you don't have testimonials yet, you can
-                    delete this entire "testimonials" section (from the opening to closing section tag).
+                    Rockets are cool. There's no getting around that.
                   </p>
                 </div>
-
               </div>
             </li>
 
@@ -300,25 +263,18 @@
 
         </section>
 
-
-        <!-- Testimonials popup modal (don't change this — it's powered by JavaScript) -->
         <div class="modal-container" data-modal-container>
-
           <div class="overlay" data-overlay></div>
-
           <section class="testimonials-modal">
-
             <button class="modal-close-btn" data-modal-close-btn>
               <ion-icon name="close-outline"></ion-icon>
             </button>
-
             <div class="modal-img-wrapper">
               <figure class="modal-avatar-box">
                 <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
               </figure>
               <img src="./assets/images/icon-quote.svg" alt="quote icon">
             </div>
-
             <div class="modal-content">
               <h4 class="h3 modal-title" data-modal-title>Name</h4>
               <time datetime="2024-01-01">Date</time>
@@ -326,157 +282,163 @@
                 <p>Testimonial text appears here automatically.</p>
               </div>
             </div>
-
           </section>
-
         </div>
 
       </article>
 
 
 
-      <!-- ==========================================================
-           RESUME PAGE
-           ========================================================== -->
+
+      <!-- RESUME -->
       <article class="resume" data-page="resume">
 
         <header>
           <h2 class="h2 article-title">Resume</h2>
         </header>
 
-        <!-- STEP 13: Education section
-             Replace the school names, dates, and descriptions with YOUR education.
-             To ADD an entry: copy an entire <li class="timeline-item"> block.
-             To REMOVE one: delete the entire <li>...</li> block. -->
         <section class="timeline">
-
           <div class="title-wrapper">
             <div class="icon-box">
               <ion-icon name="book-outline"></ion-icon>
             </div>
             <h3 class="h3">Education</h3>
           </div>
-
           <ol class="timeline-list">
-
             <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Your University Name</h4>
-              <span>2022 — Present</span>
+              <h4 class="h4 timeline-item-title">Texas A&M University</h4>
+              <span>2025 — Present</span>
               <p class="timeline-text">
-                Studying Computer Science (or your major). Relevant coursework includes
-                Data Structures, Algorithms, Web Development, etc.
+                Studying General Engineering, intend to specialize in Mechanical or Aerospace Engineering.
               </p>
             </li>
-
             <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Your High School Name</h4>
-              <span>2018 — 2022</span>
+              <h4 class="h4 timeline-item-title">John Paul II High School</h4>
+              <span>2021 — 2025</span>
               <p class="timeline-text">
-                Brief description of your high school achievements, clubs, or honors.
+                Served as Varsity Tennis Captain, leading the team to back-to-back State Championship 
+                appearances. Beyond athletics, I held leadership roles as a Kairos Retreat Leader, 
+                guiding peers through personal development and reflection. My academic commitment was 
+                recognized through active membership in Mu Alpha Theta and the National Honor Society, 
+                graduating top 10% of my class.
               </p>
             </li>
-
           </ol>
-
         </section>
 
-        <!-- STEP 14: Experience section
-             Replace with YOUR work experience, internships, or volunteer positions.
-             Same format as Education above — copy/paste <li> blocks to add more. -->
         <section class="timeline">
-
           <div class="title-wrapper">
             <div class="icon-box">
               <ion-icon name="book-outline"></ion-icon>
             </div>
             <h3 class="h3">Experience</h3>
           </div>
-
           <ol class="timeline-list">
-
             <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Job Title or Role</h4>
-              <span>2024 — Present</span>
+              <h4 class="h4 timeline-item-title">Aggie Club of Engineers - Service Team</h4>
+              <span>September 2025 — Present</span>
               <p class="timeline-text">
-                Describe what you did in this role. What were your responsibilities?
-                What did you build or accomplish?
+                Leading community-focused initiatives through diverse service projects. I actively 
+                participate in The Big Event, the nation's largest one-day student-run service project, 
+                and maintain local infrastructure through the Adopt-A-Street program. Additionally, I 
+                coordinate hands-on service events, such as fabricating donated pet toys for local 
+                shelters, and represent the College of Engineering during Aggie Saturday, providing 
+                guided tours and insights to prospective engineering students.
               </p>
             </li>
-
             <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Another Role or Internship</h4>
-              <span>2023 — 2024</span>
+              <h4 class="h4 timeline-item-title">Rocket Engine Design Team - Thrust Chamber Assembly</h4>
+              <span>January 2025 — Present</span>
               <p class="timeline-text">
-                Brief description of this experience. Focus on impact and what you learned.
+                Contributing to the development of the Elysium 2 liquid rocket engine by specializing 
+                in combustion chamber integrity and thermal management. I fabricated high-precision 
+                3D-printed silicone molds used to cast ablative linings, ensuring the chamber can 
+                withstand combustion temperatures of ~3000 K. My work includes conducting thermal 
+                analysis research to implement innovative cooling solutions capable of sustaining 
+                1,500 lbs of thrust during static fire and flight.
               </p>
             </li>
-
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Turtle Robotics Hatchling</h4>
+              <span>January 2025 — Present</span>
+              <p class="timeline-text">
+                Learning fundamental robotics concepts and programming skills through hands-on experience 
+                with the Turtle Robotics Hatchling team. I am involved in designing and building 
+                small-scale autonomous vehicles, gaining proficiency in Arduino programming and sensor 
+                integration. This role has provided me with a strong foundation in embedded systems and 
+                sparked my interest in robotics competitions.
+              </p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Chicken N' Pickle - Server</h4>
+              <span>April 2025 — August 2025</span>
+              <p class="timeline-text">
+                Managed high-volume customer service operations in a fast-paced restaurant environment, 
+                consistently delivering exceptional dining experiences. I honed my communication and 
+                teamwork skills while coordinating with kitchen staff to ensure timely and accurate order 
+                fulfillment.
+              </p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Potbelly Associate</h4>
+              <span>September 2023 — October 2024</span>
+              <p class="timeline-text">
+                Provided excellent customer service in a fast-paced sandwich shop, consistently exceeding 
+                sales targets and earning recognition for outstanding performance. Developed strong 
+                interpersonal skills while engaging with customers and collaborating with team members to 
+                maintain a positive work environment.
+              </p>
+            </li>
           </ol>
-
         </section>
 
-        <!-- STEP 15: Skills section
-             Replace the skill names and percentages with YOUR skills.
-             The "width: XX%;" controls how full the progress bar appears.
-             To ADD a skill: copy an entire <li class="skills-item"> block.
-             To REMOVE one: delete the entire <li>...</li> block. -->
         <section class="skill">
-
           <h3 class="h3 skills-title">My skills</h3>
-
           <ul class="skills-list content-card">
-
             <li class="skills-item">
               <div class="title-wrapper">
-                <h5 class="h5">Skill #1 (e.g. Python)</h5>
-                <data value="80">80%</data>
+                <h5 class="h5">SolidWorks</h5>
+                <data value="75">75%</data>
               </div>
               <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 80%;"></div>
+                <div class="skill-progress-fill" style="width: 75%;"></div>
               </div>
             </li>
-
             <li class="skills-item">
               <div class="title-wrapper">
-                <h5 class="h5">Skill #2 (e.g. JavaScript)</h5>
+                <h5 class="h5">Python</h5>
                 <data value="70">70%</data>
               </div>
               <div class="skill-progress-bg">
                 <div class="skill-progress-fill" style="width: 70%;"></div>
               </div>
             </li>
-
             <li class="skills-item">
               <div class="title-wrapper">
-                <h5 class="h5">Skill #3 (e.g. React)</h5>
-                <data value="60">60%</data>
+                <h5 class="h5">Machining & Fabrication</h5>
+                <data value="80">80%</data>
               </div>
               <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 60%;"></div>
+                <div class="skill-progress-fill" style="width: 80%;"></div>
               </div>
             </li>
-
             <li class="skills-item">
               <div class="title-wrapper">
-                <h5 class="h5">Skill #4 (e.g. Figma)</h5>
+                <h5 class="h5">Thermal Analysis & Research</h5>
                 <data value="50">50%</data>
               </div>
               <div class="skill-progress-bg">
                 <div class="skill-progress-fill" style="width: 50%;"></div>
               </div>
             </li>
-
           </ul>
-
         </section>
 
       </article>
 
 
 
-      <!-- ==========================================================
-           PORTFOLIO PAGE
-           ========================================================== -->
+      <!-- PORTFOLIO -->
       <article class="portfolio" data-page="portfolio">
 
         <header>
@@ -485,131 +447,190 @@
 
         <section class="projects">
 
-          <!-- STEP 16: Filter categories
-               These let visitors filter your projects by type.
-               Change the button text to match YOUR project categories.
-               Make sure the category names here match the data-category values
-               on each project item below (must be lowercase). -->
           <ul class="filter-list">
             <li class="filter-item">
-              <button class="active" data-filter-btn>All</button>
+              <button class="active" data-filter-btn>ALL</button>
             </li>
             <li class="filter-item">
-              <button data-filter-btn>Web design</button>
+              <button data-filter-btn>Rocket Engineering</button>
             </li>
             <li class="filter-item">
-              <button data-filter-btn>Applications</button>
+              <button data-filter-btn>Robotics</button>
             </li>
             <li class="filter-item">
-              <button data-filter-btn>Web development</button>
+              <button data-filter-btn>CAD & Fabrication</button>
             </li>
           </ul>
 
-          <!-- Mobile filter dropdown (mirrors the filter buttons above — update these too) -->
           <div class="filter-select-box">
             <button class="filter-select" data-select>
-              <div class="select-value" data-selecct-value>Select category</div>
+              <div class="select-value" data-selecct-value>All</div>
               <div class="select-icon">
                 <ion-icon name="chevron-down"></ion-icon>
               </div>
             </button>
-
             <ul class="select-list">
-              <li class="select-item">
-                <button data-select-item>All</button>
-              </li>
-              <li class="select-item">
-                <button data-select-item>Web design</button>
-              </li>
-              <li class="select-item">
-                <button data-select-item>Applications</button>
-              </li>
-              <li class="select-item">
-                <button data-select-item>Web development</button>
-              </li>
+              <li class="select-item"><button data-select-item>ALL</button></li>
+              <li class="select-item"><button data-select-item>Rocket Engineering</button></li>
+              <li class="select-item"><button data-select-item>Robotics</button></li>
+              <li class="select-item"><button data-select-item>CAD & Fabrication</button></li>
             </ul>
           </div>
 
-          <!-- STEP 17: Your projects!
-               This is the most important section. For EACH project:
-               1. Replace the image: put a screenshot in ./assets/images/ and update src
-               2. Replace the project title
-               3. Replace the category (must match a filter button name, lowercase)
-               4. Fill in the data-project-* attributes for the popup modal:
-                  - data-project-title: The full project name
-                  - data-project-description: A detailed description of the project
-                  - data-project-tech: Technologies/tools you used (comma-separated)
-                  - data-project-link: URL to the live project or GitHub repo (use "#" if none)
-
-               To ADD a project: copy an entire <li class="project-item"> block.
-               To REMOVE one: delete the entire <li>...</li> block. -->
           <ul class="project-list">
 
-            <li class="project-item active" data-filter-item data-category="web development"
-                data-project-title="Project Name #1"
-                data-project-description="Describe what this project does, why you built it, and what problem it solves. Go into detail — this appears in the popup when someone clicks on it!"
-                data-project-tech="HTML, CSS, JavaScript"
-                data-project-link="#">
+            <!-- ═══════════════════════════════════════════════════════
+                 HOW TO ADD A PROGRESS GALLERY TO A PROJECT:
+
+                 Add data-project-gallery as a JSON array on the <li>.
+                 Each entry needs "src", "label", and "caption".
+
+                 Example:
+                   data-project-gallery='[
+                     {"src":"./assets/images/step1.png","label":"Step 1","caption":"What happened here."},
+                     {"src":"./assets/images/step2.png","label":"Step 2","caption":"What happened next."}
+                   ]'
+
+                 Projects WITHOUT this attribute show a single image as normal.
+                 ═══════════════════════════════════════════════════════ -->
+
+            <li class="project-item active" data-filter-item data-category="rocket engineering"
+                data-project-title="Elysium 2 — Combustion Chamber"
+                data-project-description="Contributing to the development of the Elysium 2 liquid rocket engine as part of the Texas A&M Rocket Engine Design Team (TRED). Specialized in combustion chamber integrity and thermal management, fabricating high-precision 3D-printed silicone molds used to cast ablative linings capable of withstanding combustion temperatures of ~3000 K."
+                data-project-tech="SolidWorks, 3D Printing, Thermal Analysis, Silicone Molding"
+                data-project-link="#"
+                data-project-gallery='[
+                  {"src":"./assets/images/OnshapeElysium.png","label":"CAD Design","caption":"Initial CAD model of the combustion chamber designed in Onshape, defining the internal geometry and ablative lining dimensions."},
+                  {"src":"./assets/images/siliconemold.png","label":"Silicone Mold","caption":"3D-printed PLA mold used to cast the silicone mold for the final ablative pour into the combustion chamber."}
+                ]'>
               <a href="#">
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
-                  <img src="./assets/images/project-1.jpg" alt="Project Name #1" loading="lazy">
+                  <img src="./assets/images/OnshapeElysium.png" alt="Elysium 2 Combustion Chamber" loading="lazy">
                 </figure>
-                <h3 class="project-title">Project Name #1</h3>
-                <p class="project-category">Web development</p>
+                <h3 class="project-title">Elysium 2 — Combustion Chamber</h3>
+                <p class="project-category">Rocket Engineering</p>
               </a>
             </li>
 
-            <li class="project-item active" data-filter-item data-category="web development"
-                data-project-title="Project Name #2"
-                data-project-description="Write a detailed description of this project. What did you learn? What was the most challenging part? What would you do differently?"
-                data-project-tech="React, Node.js, MongoDB"
+            <li class="project-item active" data-filter-item data-category="rocket engineering"
+                data-project-title="Aluminum Dog Bone Mold"
+                data-project-description="Designed and fabricated a precision aluminum dog bone mold for ablative tensile testing. Utilized iterative design to make the part more manufacturable. In Progress."
+                data-project-tech="SolidWorks, Manual Mill, Band Saw, Belt Sander"
                 data-project-link="#">
               <a href="#">
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
-                  <img src="./assets/images/project-2.png" alt="Project Name #2" loading="lazy">
+                  <img src="./assets/images/dogBone.png" alt="Aluminum Dog Bone Mold" loading="lazy">
                 </figure>
-                <h3 class="project-title">Project Name #2</h3>
-                <p class="project-category">Web development</p>
+                <h3 class="project-title">Aluminum Dog Bone Mold</h3>
+                <p class="project-category">Rocket Engineering</p>
               </a>
             </li>
 
-            <li class="project-item active" data-filter-item data-category="web design"
-                data-project-title="Project Name #3"
-                data-project-description="Add a description for this project. Talk about the design decisions you made, the user experience you were going for, etc."
-                data-project-tech="Figma, HTML, CSS"
+            <li class="project-item active" data-filter-item data-category="rocket engineering"
+                data-project-title="Torch Igniter Fabrication"
+                data-project-description="Manufactured the steel torch igniter for the Elysium 2 rocket engine, using the lathe and mill. Learning the importance of feed speed and bit quality. This coming week I will be TIG welding the injector cap to the combustion chamber body."
+                data-project-tech="Mill, Lathe, TIG Welding, Steel Fabrication"
                 data-project-link="#">
               <a href="#">
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
-                  <img src="./assets/images/project-3.jpg" alt="Project Name #3" loading="lazy">
+                  <img src="./assets/images/torchigniter.png" alt="Torch Igniter Fabrication" loading="lazy">
                 </figure>
-                <h3 class="project-title">Project Name #3</h3>
-                <p class="project-category">Web design</p>
+                <h3 class="project-title">Torch Igniter Fabrication</h3>
+                <p class="project-category">Rocket Engineering</p>
               </a>
             </li>
 
-            <li class="project-item active" data-filter-item data-category="applications"
-                data-project-title="Project Name #4"
-                data-project-description="Describe what this application does. What technologies did you use? Who is the target audience?"
-                data-project-tech="Python, Flask, SQLite"
+            <li class="project-item active" data-filter-item data-category="rocket engineering"
+                data-project-title="Final Ablative Mold"
+                data-project-description="Designed and 3D printed a PLA mold that casted our silicone mold for the final pour of the ablative into the combustion chamber. Calculated the area of the ablative that would be poured and decided how much we needed to make."
+                data-project-tech="SolidWorks, 3D Printing, Analysis"
                 data-project-link="#">
               <a href="#">
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
-                  <img src="./assets/images/project-4.png" alt="Project Name #4" loading="lazy">
+                  <img src="./assets/images/siliconemold.png" alt="Final Ablative Mold" loading="lazy">
                 </figure>
-                <h3 class="project-title">Project Name #4</h3>
-                <p class="project-category">Applications</p>
+                <h3 class="project-title">Final Ablative Mold</h3>
+                <p class="project-category">Rocket Engineering</p>
+              </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="robotics"
+                data-project-title="Turtle Robotics — Vehicle Design"
+                data-project-description="Utilized SolidWorks to rapidly iterate design on the conveyor belt mechanism of the robot, optimizing for dimensions and reliability. Design in progress."
+                data-project-tech="SolidWorks, Iterative Development, 3D Printing"
+                data-project-link="#">
+              <a href="#">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/conveyor.png" alt="Turtle Robotics Autonomous Vehicle" loading="lazy">
+                </figure>
+                <h3 class="project-title">Turtle Robotics — Vehicle Design</h3>
+                <p class="project-category">Robotics</p>
+              </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="cad & fabrication"
+                data-project-title="Intro to MIG Welding"
+                data-project-description="Completed hands-on MIG welding training, learning proper technique, machine setup, and safety protocols. Practiced on mild steel, developing consistent bead control and understanding wire feed speed, voltage settings, and shielding gas selection. This foundational skill directly supports fabrication work on the TRED rocket engine components."
+                data-project-tech="MIG Welding, Safety Equipment, Mild Steel"
+                data-project-link="#">
+              <a href="#">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/MIG.png" alt="Intro to MIG Welding" loading="lazy">
+                </figure>
+                <h3 class="project-title">Intro to MIG Welding</h3>
+                <p class="project-category">CAD & Fabrication</p>
+              </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="cad & fabrication"
+                data-project-title="TIG Welding"
+                data-project-description="Advanced to TIG welding training after completing MIG certification. TIG welding requires significantly more precision and hand coordination — controlling the torch, filler rod, and foot pedal simultaneously. This skill is directly applied to welding the injector cap onto the Elysium 2 combustion chamber body, where weld quality is critical for pressure integrity."
+                data-project-tech="TIG Welding, Stainless Steel, Precision Fabrication"
+                data-project-link="#">
+              <a href="#">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/TIG.png" alt="TIG Welding" loading="lazy">
+                </figure>
+                <h3 class="project-title">TIG Welding</h3>
+                <p class="project-category">CAD & Fabrication</p>
+              </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="cad & fabrication"
+                data-project-title="Intro to Mill"
+                data-project-description="Learned manual milling fundamentals including machine setup, workholding, and proper use of end mills and face mills. Practiced cutting steel and aluminum stock to precise tolerances, developing an understanding of feeds, speeds, depth of cut, and chip load. These skills were immediately applied to fabricating the aluminum dog bone mold and torch igniter components."
+                data-project-tech="Manual Mill, End Mills, Steel & Aluminum, Precision Measurement"
+                data-project-link="#">
+              <a href="#">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/millTraining.png" alt="Intro to Mill" loading="lazy">
+                </figure>
+                <h3 class="project-title">Intro to Mill</h3>
+                <p class="project-category">CAD & Fabrication</p>
               </a>
             </li>
 
@@ -617,7 +638,7 @@
 
         </section>
 
-        <!-- Project detail popup modal (don't change this — powered by JavaScript) -->
+        <!-- Project detail popup modal -->
         <div class="project-modal-container" data-project-modal-container>
           <div class="overlay" data-project-overlay></div>
 
@@ -632,20 +653,21 @@
             </div>
 
             <div class="project-modal-body">
-              <div class="project-modal-img-wrapper">
+
+              <!-- Gallery (shown when project has data-project-gallery) -->
+              <div class="project-modal-gallery" data-project-modal-gallery style="display:none;"></div>
+
+              <!-- Single image fallback -->
+              <div class="project-modal-img-wrapper" data-project-modal-img-wrapper>
                 <img src="" alt="" data-project-modal-img>
               </div>
 
               <div class="project-modal-details">
                 <h4 class="h4">About This Project</h4>
-                <p class="project-modal-description" data-project-modal-description>
-                  Project description appears here.
-                </p>
+                <p class="project-modal-description" data-project-modal-description></p>
 
                 <h4 class="h4">Technologies Used</h4>
-                <div class="project-modal-tech" data-project-modal-tech>
-                  <!-- Tech tags are inserted by JavaScript -->
-                </div>
+                <div class="project-modal-tech" data-project-modal-tech></div>
 
                 <a href="#" class="project-modal-link" data-project-modal-link target="_blank" rel="noopener noreferrer">
                   <ion-icon name="open-outline"></ion-icon>
@@ -659,13 +681,10 @@
 
       </article>
 
-
     </div>
 
   </main>
 
-
-  <!-- Scripts (don't change these) -->
   <script src="./assets/js/script.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
