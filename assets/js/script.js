@@ -1,16 +1,5 @@
-// ============================================
-// PROJECT PROGRESSION GALLERY (NEW)
-// ============================================
+'use strict';
 
-<<<<<<< HEAD
-const populateProgressionGallery = function(images) {
-  const progressionContainer = document.querySelector('[data-project-progression]');
-  progressionContainer.innerHTML = '';
-
-  if (!images || images.length === 0) {
-    progressionContainer.innerHTML = '<p style="color: var(--light-gray); font-size: 14px;">No additional project steps available.</p>';
-    return;
-=======
 // ============================================================
 //  PORTFOLIO TEMPLATE — JavaScript
 // ============================================================
@@ -102,20 +91,9 @@ const filterFunc = function (selectedValue) {
     } else {
       filterItems[i].classList.remove("active");
     }
->>>>>>> 5c66e82c993bffdddaa609336409e3d39c11c2c6
   }
+}
 
-<<<<<<< HEAD
-  images.forEach(function(image, index) {
-    const item = document.createElement('div');
-    item.className = 'progression-item';
-    item.innerHTML = `
-      <div class="progression-counter">Step ${index + 1} of ${images.length}</div>
-      <img src="${image.src}" alt="Project step ${index + 1}" loading="lazy" />
-      <div class="progression-caption">${image.caption}</div>
-    `;
-    progressionContainer.appendChild(item);
-=======
 let lastClickedBtn = filterBtn[0];
 
 for (let i = 0; i < filterBtn.length; i++) {
@@ -127,13 +105,9 @@ for (let i = 0; i < filterBtn.length; i++) {
     lastClickedBtn.classList.remove("active");
     this.classList.add("active");
     lastClickedBtn = this;
->>>>>>> 5c66e82c993bffdddaa609336409e3d39c11c2c6
   });
-};
+}
 
-<<<<<<< HEAD
-// UPDATE PROJECT MODAL HANDLER
-=======
 
 
 // -----------------------------------------------------------
@@ -157,10 +131,10 @@ const projectModalFunc = function () {
   projectOverlay.classList.toggle("active");
 }
 
->>>>>>> 5c66e82c993bffdddaa609336409e3d39c11c2c6
 const projectItems = document.querySelectorAll("[data-filter-item]");
 
 for (let i = 0; i < projectItems.length; i++) {
+
   projectItems[i].addEventListener("click", function (e) {
     e.preventDefault();
 
@@ -170,29 +144,12 @@ for (let i = 0; i < projectItems.length; i++) {
     const link = this.dataset.projectLink;
     const galleryData = this.dataset.projectGallery;
     const imgElement = this.querySelector(".project-img img");
-    
-    let images = [];
-    if (this.dataset.projectImages) {
-      try {
-        images = JSON.parse(this.dataset.projectImages);
-      } catch (e) {
-        console.log('Error parsing project images:', e);
-      }
-    }
 
-<<<<<<< HEAD
-=======
     // Fill in title and description
->>>>>>> 5c66e82c993bffdddaa609336409e3d39c11c2c6
     projectModalTitle.textContent = title;
     projectModalDescription.textContent = description;
 
-<<<<<<< HEAD
-    populateProgressionGallery(images);
-
-=======
     // Tech tags
->>>>>>> 5c66e82c993bffdddaa609336409e3d39c11c2c6
     projectModalTech.innerHTML = "";
     if (tech) {
       tech.split(",").map(function(t) { return t.trim(); }).forEach(function(techName) {
@@ -203,10 +160,7 @@ for (let i = 0; i < projectItems.length; i++) {
       });
     }
 
-<<<<<<< HEAD
-=======
     // Project link
->>>>>>> 5c66e82c993bffdddaa609336409e3d39c11c2c6
     if (link && link !== "#") {
       projectModalLink.href = link;
       projectModalLink.style.display = "flex";
@@ -214,11 +168,6 @@ for (let i = 0; i < projectItems.length; i++) {
       projectModalLink.style.display = "none";
     }
 
-<<<<<<< HEAD
-    projectModalFunc();
-  });
-}
-=======
     // Gallery or single image
     if (galleryData) {
       let gallery = [];
@@ -287,4 +236,3 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
->>>>>>> 5c66e82c993bffdddaa609336409e3d39c11c2c6
