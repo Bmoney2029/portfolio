@@ -51,6 +51,31 @@
       margin-bottom: 4px;
     }
 
+    /* ── Resume Tab ── */
+    .resume-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 20px;
+      margin-bottom: 26px;
+      background: var(--bg-gradient-jet);
+      border: 1px solid var(--jet);
+      border-radius: 14px;
+      color: var(--orange-yellow-crayola);
+      font-size: var(--fs-6, 14px);
+      font-weight: 500;
+      text-decoration: none;
+      box-shadow: var(--shadow-1, none);
+      transition: 0.25s ease;
+    }
+
+    .resume-btn:hover {
+      border-color: var(--orange-yellow-crayola);
+      transform: translateY(-1px);
+    }
+
+    .resume-btn ion-icon { font-size: 18px; }
+
     .gallery-divider {
       border: none;
       border-top: 1px solid rgba(255,255,255,0.08);
@@ -111,16 +136,6 @@
 
           <li class="contact-item">
             <div class="icon-box">
-              <ion-icon name="calendar-outline"></ion-icon>
-            </div>
-            <div class="contact-info">
-              <p class="contact-title">Birthday</p>
-              <time datetime="2006-09-06">September 6, 2006</time>
-            </div>
-          </li>
-
-          <li class="contact-item">
-            <div class="icon-box">
               <ion-icon name="location-outline"></ion-icon>
             </div>
             <div class="contact-info">
@@ -152,13 +167,13 @@
       <nav class="navbar">
         <ul class="navbar-list">
           <li class="navbar-item">
-            <button class="navbar-link active" data-nav-link>About</button>
+            <button class="navbar-link active" data-nav-link>Portfolio</button>
+          </li>
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>About</button>
           </li>
           <li class="navbar-item">
             <button class="navbar-link" data-nav-link>Resume</button>
-          </li>
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Portfolio</button>
           </li>
         </ul>
       </nav>
@@ -166,7 +181,7 @@
 
 
       <!-- ABOUT -->
-      <article class="about active" data-page="about">
+      <article class="about" data-page="about">
 
         <header>
           <h2 class="h2 article-title">About me</h2>
@@ -178,9 +193,11 @@
             (3.84 GPA) interested in rocket propulsion, precision fabrication,
             and embedded systems. Currently an Engineering Intern at Albireo LLC, where I design
             control-system electronics — KiCad schematics and CNC-milled PCBs — for a 10-ft
-            motorized telescope that automatically slews to any star or constellation. Through my
-            work with the Texas A&M Rocket Engine Design Team (RED) and Turtle Robotics, I am
-            gaining hands on experience in CAD design, machining, and autonomous vehicle control.
+            motorized telescope that automatically slews to any star or constellation, including the
+            power distribution board that runs the platform off a single 12 V battery. I also serve as
+            Chief Engineer of the Elysium II liquid rocket engine on the Texas A&M Rocket Engine Design
+            Team (RED), directing every engine subteam and giving the final technical checkoff before a
+            test is run.
           </p>
           <p>
             Contributing to the College Station community through dedicated service and large scale 
@@ -240,67 +257,6 @@
 
         </section>
 
-        <section class="testimonials">
-
-          <h3 class="h3 testimonials-title">Testimonials</h3>
-
-          <ul class="testimonials-list has-scrollbar">
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/turtlelogo.png" alt="Sir Henry Royce" width="50" data-testimonials-avatar>
-                </figure>
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Sir Henry Royce</h4>
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    The engineer's first problem in any design is to discover 
-                    what the problem really is.
-                  </p>
-                </div>
-              </div>
-            </li>
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/REDlogo.png" alt="Elon Musk" width="50" data-testimonials-avatar>
-                </figure>
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Elon Musk</h4>
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Rockets are cool. There's no getting around that.
-                  </p>
-                </div>
-              </div>
-            </li>
-
-          </ul>
-
-        </section>
-
-        <div class="modal-container" data-modal-container>
-          <div class="overlay" data-overlay></div>
-          <section class="testimonials-modal">
-            <button class="modal-close-btn" data-modal-close-btn>
-              <ion-icon name="close-outline"></ion-icon>
-            </button>
-            <div class="modal-img-wrapper">
-              <figure class="modal-avatar-box">
-                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
-              </figure>
-              <img src="./assets/images/icon-quote.svg" alt="quote icon">
-            </div>
-            <div class="modal-content">
-              <h4 class="h3 modal-title" data-modal-title>Name</h4>
-              <time datetime="2024-01-01">Date</time>
-              <div data-modal-text>
-                <p>Testimonial text appears here automatically.</p>
-              </div>
-            </div>
-          </section>
-        </div>
-
       </article>
 
 
@@ -312,6 +268,23 @@
         <header>
           <h2 class="h2 article-title">Resume</h2>
         </header>
+
+        <section class="resume-download">
+          <p class="timeline-text" style="margin-bottom: 18px;">
+            My full resume, always the current version. Open it in a new tab or download a copy.
+          </p>
+          <a href="./assets/Braden_Gallagher_Resume.pdf" target="_blank" rel="noopener noreferrer"
+             class="resume-btn">
+            <ion-icon name="document-text-outline"></ion-icon>
+            <span>View / Download Resume (PDF)</span>
+          </a>
+          <div class="resume-embed"
+               style="border:1px solid hsla(0,0%,100%,0.08); border-radius:14px; overflow:hidden; background:hsl(240,2%,13%);">
+            <iframe src="./assets/Braden_Gallagher_Resume.pdf#view=FitH"
+                    title="Braden Gallagher Resume"
+                    style="width:100%; height:min(1100px, 130vw); border:0; display:block;"></iframe>
+          </div>
+        </section>
 
         <section class="timeline">
           <div class="title-wrapper">
@@ -342,153 +315,13 @@
           </ol>
         </section>
 
-        <section class="timeline">
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-            <h3 class="h3">Experience</h3>
-          </div>
-          <ol class="timeline-list">
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Albireo LLC - Engineering Intern</h4>
-              <span>May 2026 — Present</span>
-              <p class="timeline-text">
-                Designing the control-system electronics for a 10-ft motorized telescope that
-                automatically slews to user-selected stars and constellations. I draft circuit
-                schematics in KiCad and fabricate custom PCBs in-house by CNC-milling copper-clad
-                boards — including the control panel's button-interface board and an Arduino PWM
-                driver board for the stepper motors that point the telescope.
-              </p>
-            </li>
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Rocket Engine Design Team - Thrust Chamber Assembly Lead</h4>
-              <span>May 2026 — Present</span>
-              <p class="timeline-text">
-                Lead a dedicated group of 9 engineers in the design, fabrication, and testing of the 
-                Elysium II, Ragnarok, and Icarus Rocket Engines. Oversee the development of combustion chambers,
-                fuel injectors, igniters, and data acquisition systems, ensuring all components meet rigorous
-                performance and safety standards. Coordinate with subteams to create cohesive rocket engines.
-
-              </p>
-            </li>
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Aggie Club of Engineers - Service Team</h4>
-              <span>September 2025 — Present</span>
-              <p class="timeline-text">
-                Leading community-focused initiatives through diverse service projects. I actively 
-                participate in The Big Event, the nation's largest one-day student-run service project, 
-                and maintain local infrastructure through the Adopt-A-Street program. Additionally, I 
-                coordinate hands-on service events, such as fabricating donated pet toys for local 
-                shelters, and represent the College of Engineering during Aggie Saturday, providing 
-                guided tours and insights to prospective engineering students.
-              </p>
-            </li>
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Rocket Engine Design Team - Thrust Chamber Assembly</h4>
-              <span>January 2026 — May 2026</span>
-              <p class="timeline-text">
-                Contributing to the development of the Elysium II liquid rocket engine through work on the 
-                ablative liner, including research and testing to ensure the liner can withstand the extreme 
-                thermal and mechanical stresses of rocket engine operation. Also redesigned the fuel manifold and injector
-                so that we could manufacture everything in house, which was a critical step in our development process. 
-                This role has provided me with hands-on experience in rocket engine design and fabrication, as well as a deeper 
-                understanding of the challenges involved in developing reliable propulsion systems. I have also worked
-                heavily on the Ragnarok, regeneratively cooled engine, torch igniter manufacturing process, through machining to welding
-                to ensure it seals without compromising precision.
-              </p>
-            </li>
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Turtle Robotics Hatchling</h4>
-              <span>January 2026 — Present</span>
-              <p class="timeline-text">
-                Learning fundamental robotics concepts and programming skills through hands-on experience 
-                with the Turtle Robotics Hatchling team. I am involved in designing and building 
-                small-scale vehicles, gaining proficiency in Arduino programming and sensor 
-                integration. This role has provided me with a strong foundation in embedded systems and 
-                sparked my interest in robotics competitions.
-              </p>
-            </li>
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Chicken N' Pickle - Server</h4>
-              <span>April 2025 — August 2025</span>
-              <p class="timeline-text">
-                Managed high-volume customer service operations in a fast-paced restaurant environment, 
-                consistently delivering exceptional dining experiences. I honed my communication and 
-                teamwork skills while coordinating with kitchen staff to ensure timely and accurate order 
-                fulfillment.
-              </p>
-            </li>
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Potbelly Associate</h4>
-              <span>September 2023 — October 2024</span>
-              <p class="timeline-text">
-                Provided excellent customer service in a fast-paced sandwich shop, consistently exceeding 
-                sales targets and earning recognition for outstanding performance. Developed strong 
-                interpersonal skills while engaging with customers and collaborating with team members to 
-                maintain a positive work environment.
-              </p>
-            </li>
-          </ol>
-        </section>
-
-        <section class="skill">
-          <h3 class="h3 skills-title">My skills</h3>
-          <ul class="skills-list content-card">
-            <li class="skills-item">
-              <div class="title-wrapper">
-                <h5 class="h5">SolidWorks</h5>
-                <data value="75">75%</data>
-              </div>
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 75%;"></div>
-              </div>
-            </li>
-            <li class="skills-item">
-              <div class="title-wrapper">
-                <h5 class="h5">Python</h5>
-                <data value="70">70%</data>
-              </div>
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 70%;"></div>
-              </div>
-            </li>
-            <li class="skills-item">
-              <div class="title-wrapper">
-                <h5 class="h5">Machining & Fabrication</h5>
-                <data value="80">80%</data>
-              </div>
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 80%;"></div>
-              </div>
-            </li>
-            <li class="skills-item">
-              <div class="title-wrapper">
-                <h5 class="h5">Thermal Analysis & Research</h5>
-                <data value="50">50%</data>
-              </div>
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 50%;"></div>
-              </div>
-            </li>
-            <li class="skills-item">
-              <div class="title-wrapper">
-                <h5 class="h5">Circuit Design & PCB Fabrication (KiCad)</h5>
-                <data value="60">60%</data>
-              </div>
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 60%;"></div>
-              </div>
-            </li>
-          </ul>
-        </section>
 
       </article>
 
 
 
       <!-- PORTFOLIO -->
-      <article class="portfolio" data-page="portfolio">
+      <article class="portfolio active" data-page="portfolio">
 
         <header>
           <h2 class="h2 article-title">Portfolio</h2>
@@ -555,8 +388,8 @@
 
             <li class="project-item active" data-filter-item data-category="electronics & controls"
                 data-project-title="Albireo Telescope — Control System Electronics"
-                data-project-description="As an Engineering Intern at Albireo LLC, I am designing the control-system electronics for a 10-ft motorized telescope that automatically slews to user-selected stars and constellations. I draft the circuit schematics in KiCad, then fabricate the PCBs in-house by CNC-milling copper-clad boards — including the control panel's button-interface board and an Arduino PWM driver board for the stepper motors."
-                data-project-tech="KiCad, PCB CNC Milling, Arduino, Stepper Motor Control, Soldering"
+                data-project-description="As an Engineering Intern at Albireo LLC, I am designing the control-system electronics for a 10-ft motorized telescope that automatically slews to user-selected stars and constellations. I draft the circuit schematics in KiCad, then fabricate the PCBs in-house by CNC-milling copper-clad boards — including the control panel's button-interface board and an Arduino PWM driver board for the stepper motors. I also designed the power distribution board that runs the whole platform off a single 12 V battery, budgeting and allocating rails across the control panel Raspberry Pi, display, LED push buttons, and stepper motor drives."
+                data-project-tech="KiCad, PCB CNC Milling, Power Distribution &amp; Load Budgeting, 12 V DC Systems, Arduino, Raspberry Pi, Stepper Motor Control, Soldering"
                 data-project-link="#"
                 data-project-gallery='[
                   {"src":"./assets/images/kiCADschematic.png","label":"KiCad Schematic","caption":"Circuit schematic for the control panel button interface, drafted in KiCad."},
@@ -597,8 +430,8 @@
             </li>
 
             <li class="project-item active" data-filter-item data-category="rocket engineering"
-                data-project-title="Elysium 2 — Combustion Chamber"
-                data-project-description="Contributing to the development of the Elysium 2 liquid rocket engine as part of the Texas A&M Rocket Engine Design Team (TRED). Specialized in combustion chamber integrity and thermal management, fabricating high-precision 3D-printed silicone molds used to cast ablative linings capable of withstanding combustion temperatures of ~3000 K."
+                data-project-title="Elysium II — Fuel Injector Redesign for Manufacturability"
+                data-project-description="Redesigned the fuel injector and manifold of the Elysium II liquid rocket engine so the assembly could be manufactured in house, validated the redesign in FEA, and then machined and assembled the finished injector — carrying it from CAD to test-ready hardware. Work done as part of the Texas A&amp;M Rocket Engine Design Team (RED), where I also handled combustion chamber thermal management and ablative lining fabrication."
                 data-project-tech="SolidWorks, 3D Printing, Thermal Analysis, Silicone Molding"
                 data-project-link="#"
                 data-project-gallery='[

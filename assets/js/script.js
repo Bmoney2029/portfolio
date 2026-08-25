@@ -28,38 +28,6 @@ sidebarBtn.addEventListener("click", function () {
 
 
 // -----------------------------------------------------------
-//  TESTIMONIALS MODAL
-// -----------------------------------------------------------
-const testimonialsItem = document.querySelectorAll("[data-testimonials-item]");
-const modalContainer = document.querySelector("[data-modal-container]");
-const modalCloseBtn = document.querySelector("[data-modal-close-btn]");
-const overlay = document.querySelector("[data-overlay]");
-
-const modalImg = document.querySelector("[data-modal-img]");
-const modalTitle = document.querySelector("[data-modal-title]");
-const modalText = document.querySelector("[data-modal-text]");
-
-const testimonialsModalFunc = function () {
-  modalContainer.classList.toggle("active");
-  overlay.classList.toggle("active");
-}
-
-for (let i = 0; i < testimonialsItem.length; i++) {
-  testimonialsItem[i].addEventListener("click", function () {
-    modalImg.src = this.querySelector("[data-testimonials-avatar]").src;
-    modalImg.alt = this.querySelector("[data-testimonials-avatar]").alt;
-    modalTitle.innerHTML = this.querySelector("[data-testimonials-title]").innerHTML;
-    modalText.innerHTML = this.querySelector("[data-testimonials-text]").innerHTML;
-    testimonialsModalFunc();
-  });
-}
-
-modalCloseBtn.addEventListener("click", testimonialsModalFunc);
-overlay.addEventListener("click", testimonialsModalFunc);
-
-
-
-// -----------------------------------------------------------
 //  PORTFOLIO FILTER
 // -----------------------------------------------------------
 const select = document.querySelector("[data-select]");
@@ -223,16 +191,17 @@ const pages = document.querySelectorAll("[data-page]");
 for (let i = 0; i < navigationLinks.length; i++) {
   navigationLinks[i].addEventListener("click", function () {
 
-    for (let i = 0; i < pages.length; i++) {
-      if (this.innerHTML.toLowerCase() === pages[i].dataset.page) {
-        pages[i].classList.add("active");
-        navigationLinks[i].classList.add("active");
-        window.scrollTo(0, 0);
-      } else {
-        pages[i].classList.remove("active");
-        navigationLinks[i].classList.remove("active");
-      }
+    const target = this.innerHTML.toLowerCase().trim();
+
+    for (let p = 0; p < pages.length; p++) {
+      pages[p].classList.toggle("active", pages[p].dataset.page === target);
     }
+
+    for (let n = 0; n < navigationLinks.length; n++) {
+      navigationLinks[n].classList.toggle("active", navigationLinks[n] === this);
+    }
+
+    window.scrollTo(0, 0);
 
   });
 }
