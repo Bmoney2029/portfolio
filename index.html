@@ -386,6 +386,31 @@
                        ]'>
                  ═══════════════════════════════════════════════════════ -->
 
+            <li class="project-item active" data-filter-item data-category="rocket engineering"
+                data-project-title="Elysium II — Fuel Injector Redesign for Manufacturability"
+                data-project-description="Redesigned the fuel injector and manifold of the Elysium II liquid rocket engine so the assembly could be machined in house, then manually machined and assembled the finished injector — carrying it from CAD to test-ready hardware. Work done as part of the Texas A&amp;M Rocket Engine Design Team (RED), where I also handled combustion chamber thermal management and ablative lining fabrication."
+                data-project-tech="SolidWorks, Manual Mill, Manual Lathe, TIG Welding, 304 Stainless Steel, GD&amp;T"
+                data-project-link="#"
+                data-project-gallery='[
+                  {"src":"./assets/images/OnshapeElysium.png","label":"Initial CAD Design","caption":"This was the initial design, but we had to change it — the curved annulus and internal geometry could not be manufactured with the tooling we had."},
+                  {"src":"./assets/images/NewFullInjector.png","label":"Redesigned Injector","caption":"Split the injector into a two-piece upper and lower manifold so the annulus could be machined manually, and added a slot for a screw-in pintle. This let us use the stock 304 stainless steel we already had on hand and made the whole assembly far easier to manufacture."},
+                  {"src":"./assets/images/PintleDrawing.png","label":"Pintle Drawing","caption":"Manufacturing drawing for the screw-in pintle, dimensioned for in-house machining."},
+                  {"src":"./assets/images/UpperManifoldDrawing.png","label":"Upper Manifold Drawing","caption":"Manufacturing drawing for the upper manifold that feeds propellant to the injector."},
+                  {"src":"./assets/images/machinedPintleUMLM.jpg","label":"Machining to Tolerance","caption":"Machining the pintle, upper manifold, and lower manifold to tolerance — all by hand on manual machines, done entirely solo, roughly 30 hours of machine time in so far."},
+                  {"src":"./assets/images/casingWeldin.jpeg","label":"Casing Modification","caption":"Had to modify the casing so the lower manifold could bolt to the top of it — cut the casing down and welded on a flange."}
+                ]'>
+              <a href="#">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/NewFullInjectorThumb.jpg" alt="Elysium 2 Combustion Chamber" loading="lazy">
+                </figure>
+                <h3 class="project-title">Elysium 2 — Fuel Injector Redesign for Manufacturability</h3>
+                <p class="project-category">Rocket Engineering</p>
+              </a>
+            </li>
+
             <li class="project-item active" data-filter-item data-category="electronics & controls"
                 data-project-title="Albireo Telescope — Control System Electronics"
                 data-project-description="As an Engineering Intern at Albireo LLC, I am designing the control-system electronics for a 10-ft motorized telescope that automatically slews to user-selected stars and constellations. I draft the circuit schematics in KiCad, then fabricate the PCBs in-house by CNC-milling copper-clad boards — including the control panel's button-interface board and an Arduino PWM driver board for the stepper motors. I also designed the power distribution board that runs the whole platform off a single 12 V battery, budgeting and allocating rails across the control panel Raspberry Pi, display, LED push buttons, and stepper motor drives."
@@ -394,7 +419,7 @@
                 data-project-gallery='[
                   {"src":"./assets/images/kiCADschematic.png","label":"KiCad Schematic","caption":"Circuit schematic for the control panel button interface, drafted in KiCad."},
                   {"src":"./assets/images/CustomPCB.jpg","label":"CNC-Milled PCB","caption":"Custom PCB fabricated in-house by CNC-milling a copper-clad board."},
-                  {"src":"./assets/images/WiringControlPanel.jpg","label":"Telescope Assembly","caption":"The 10-ft telescope tube and motorized mount the control system drives."}
+                  {"src":"./assets/images/WiringControlPanel.jpg","label":"Control Panel Wiring","caption":"Control panel wiring and stepper motors that drive the telescope — wired through to the joysticks, display screen, Raspberry Pi, and Arduino."}
                 ]'>
               <a href="#">
                 <figure class="project-img">
@@ -416,7 +441,6 @@
                 data-project-gallery='[
                   {"src":"./assets/images/ThrustStandKiCad.png","label":"KiCad Wiring","caption":"KiCad schematic for the load cell amplifier and Arduino data-acquisition wiring."},
                   {"src":"./assets/images/PropTestStand.jpg","label":"Thrust Stand","caption":"Load-cell-instrumented thrust stand used to measure propeller thrust."},
-                  {"src":"./assets/images/TestStandData.png","label":"Test Stand Data","caption":"Raw data capture from a thrust stand run."},
                   {"src":"./assets/images/thrustData.png","label":"Thrust Data","caption":"Real-world thrust measurements collected across propeller designs."}
                 ]'>
               <a href="#">
@@ -431,54 +455,24 @@
               </a>
             </li>
 
-            <li class="project-item active" data-filter-item data-category="rocket engineering"
-                data-project-title="Elysium II — Fuel Injector Redesign for Manufacturability"
-                data-project-description="Redesigned the fuel injector and manifold of the Elysium II liquid rocket engine so the assembly could be manufactured in house, validated the redesign in FEA, and then machined and assembled the finished injector — carrying it from CAD to test-ready hardware. Work done as part of the Texas A&amp;M Rocket Engine Design Team (RED), where I also handled combustion chamber thermal management and ablative lining fabrication."
-                data-project-tech="SolidWorks, 3D Printing, Thermal Analysis, Silicone Molding"
+            <li class="project-item active" data-filter-item data-category="cad & fabrication"
+                data-project-title="RC Plane — Aerodynamic Design"
+                data-project-description="Personal project: designing and building a radio-controlled airplane from the ground up. Started with airfoil selection and full-aircraft aerodynamic analysis in XFLR5 to size the wing and predict lift, drag, and stability before committing to a build."
+                data-project-tech="XFLR5, Aerodynamic Analysis, Airfoil Selection, CAD"
                 data-project-link="#"
                 data-project-gallery='[
-                  {"src":"./assets/images/OnshapeElysium.png","label":"CAD Design","caption":"Initial CAD model of the combustion chamber designed in Onshape, defining the internal geometry and ablative lining dimensions."},
-                  {"src":"./assets/images/N2OFEA.png","label":"Validation of Design","caption":"After my initial redesign, I went to FEA to validate it, and it failed. Leading me to further tweak the design, seen below."},
-                  {"src":"./assets/images/PintleDrawing.png","label":"Pintle Drawing","caption":"Manufacturing drawing for the screw-in pintle, dimensioned for in-house machining."},
-                  {"src":"./assets/images/UpperManifoldDrawing.png","label":"Upper Manifold Drawing","caption":"Manufacturing drawing for the upper manifold that feeds propellant to the injector."},
-                  {"src":"./assets/images/NewInjector.png","label":"Redesigned Injector","caption":"Redesigned for manufacturability, featuring a screw in pintle injector"},
-                  {"src":"./assets/images/machinedPintleUMLM.jpg","label":"Machined Parts","caption":"Pintle, upper manifold, and lower manifold machined in-house, ready for assembly."},
-                  {"src":"./assets/images/casingWeldin.jpeg","label":"Casing Weld-In","caption":"Welding the casing to complete the injector assembly."},
-                  {"src":"./assets/images/NewFullInjector.png","label":"Finished Injector Assembly","caption":"The fully assembled injector, carried from CAD to test-ready hardware."}
+                  {"src":"./assets/images/PlaneSimulationData.png","label":"XFLR5 Analysis","caption":"Full-aircraft aerodynamic analysis in XFLR5, used to size the wing and evaluate lift, drag, and stability."},
+                  {"src":"./assets/images/planeSTL.png","label":"CAD Model","caption":"SolidWorks model of the airframe built from the XFLR5 geometry, ready to break into printable sections."}
                 ]'>
               <a href="#">
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
-                  <img src="./assets/images/NewFullInjectorThumb.jpg" alt="Elysium 2 Combustion Chamber" loading="lazy">
+                  <img src="./assets/images/planeThumb.jpg" alt="RC Plane Aerodynamic Design" loading="lazy">
                 </figure>
-                <h3 class="project-title">Elysium 2 — Fuel Injector Redesign for Manufacturability</h3>
-                <p class="project-category">Rocket Engineering</p>
-              </a>
-            </li>
-
-            <li class="project-item active" data-filter-item data-category="rocket engineering"
-                data-project-title="Ablative Dog Bone Tensile Strength Testing"
-                data-project-description="Manufactured and tested the ablative that will be used for our Elysium 2 and Icarus combustion chambers."
-                data-project-tech="SolidWorks, Manual Mill, Band Saw, Belt Sander"
-                data-project-link="#"
-                data-project-gallery='[
-                  {"src":"./assets/images/DogBoneDrawing-1.png","label":"Aluminum Dog Bone Mold Drawing","caption":"Designed an aluminum dog bone mold that would allow us to cast ablative dog bones for tensile strength testing."},
-                  {"src":"./assets/images/dogBone.png","label":"Manufactured Aluminum Dog Bone","caption":"Tested different ways to manufacture the aluminum dog bones, utilizing the rotating chuck vice grip on the manual mill to get the angles."},
-                  {"src":"./assets/images/AblativeTensileTesting.png","label":"Ablative Tensile Strength Testing","caption":"Tested the tensile strength of the ablative material using the aluminum dog bone molds."},
-                  {"src":"./assets/images/ablative.png","label":"Ablative Tiles","caption":"Also cast ablative tiles for heat testing."},
-                  {"src":"./assets/images/flamedAblativeTiles.png","label":"Flamed Ablative Tiles","caption":"Tested the ablative tiles fire in order to get regression rates. Will couple this data with the tensile strength data to simulate how it will perform in the combustion chamber."}
-                ]'>
-              <a href="#">
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/dogBone.png" alt="Ablative Dog Bone Tensile Strength Testing" loading="lazy">
-                </figure>
-                <h3 class="project-title">Ablative Dog Bone Tensile Strength Testing</h3>
-                <p class="project-category">Rocket Engineering</p>
+                <h3 class="project-title">RC Plane — Aerodynamic Design</h3>
+                <p class="project-category">CAD & Fabrication</p>
               </a>
             </li>
 
@@ -513,7 +507,6 @@
                 data-project-link="#"
                 data-project-gallery='[
                   {"src":"./assets/images/TestStandDesign.png","label":"CAD Design","caption":"Initial CAD model of the test stand designed in Onshape."},
-                  {"src":"./assets/images/TorchTestStand.png","label":"Test Stand","caption":"Bones of the test stand for the torch igniter."},
                   {"src":"./assets/images/StandAndTorch.png","label":"Welded Test Stand with Torch","caption":"Test stand after welding, ready for testing the igniter."}
                 ]'>
               <a href="#">
@@ -553,6 +546,27 @@
             </li>
 
             <li class="project-item active" data-filter-item data-category="cad & fabrication"
+                data-project-title="Design and Analysis of SAE Baja Braking System"
+                data-project-description="Designed and analyzed the forces applied to a brake pedal for a SAE Baja vehicle."
+                data-project-tech="SolidWorks"
+                data-project-link="#"
+                data-project-gallery='[
+                  {"src":"./assets/images/pedalFEA.png","label":"Aluminum Brake Pedal","caption":"Designed an aluminum brake pedal for BAJA SAE and validated my design with SolidWorks FEA."},
+                  {"src":"./assets/images/fullPedal.png","label":"Full Brake Pedal Assembly","caption":"Full brake pedal assembly, designed for manufacturability and performance."}
+                ]'>
+              <a href="#">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/pedalFEA.png" alt="Design and Analysis of SAE Baja Braking System" loading="lazy">
+                </figure>
+                <h3 class="project-title">Design and Analysis of SAE Baja Braking System</h3>
+                <p class="project-category">CAD & Fabrication</p>
+              </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="cad & fabrication"
                 data-project-title="FEDC Manufacturing Pop-Up Classes"
                 data-project-description="Completed hands on training for the manual lathe, mill, and MIG/TIG welding at the Fabrication Education and Development Center (FEDC) on the Texas A&M campus. These classes provided foundational skills in machining and welding that I have applied to my work with the Texas A&M Rocket Engine Design Team (TRED)."
                 data-project-tech="Mill, Lathe, MIG Welding, TIG Welding, Steel & Aluminum Fabrication"
@@ -575,45 +589,27 @@
               </a>
             </li>
 
-            <li class="project-item active" data-filter-item data-category="cad & fabrication"
-                data-project-title="Design and Analysis of SAE Baja Braking System"
-                data-project-description="Designed and analyzed the forces applied to a brake pedal for a SAE Baja vehicle."
-                data-project-tech="SolidWorks"
+            <li class="project-item active" data-filter-item data-category="rocket engineering"
+                data-project-title="Ablative Dog Bone Tensile Strength Testing"
+                data-project-description="Manufactured and tested the ablative that will be used for our Elysium 2 and Icarus combustion chambers."
+                data-project-tech="SolidWorks, Manual Mill, Band Saw, Belt Sander"
                 data-project-link="#"
                 data-project-gallery='[
-                  {"src":"./assets/images/pedalFEA.png","label":"Aluminum Brake Pedal","caption":"Designed an aluminum brake pedal for BAJA SAE and validated my design with SolidWorks FEA."},
-                  {"src":"./assets/images/fullPedal.png","label":"Full Brake Pedal Assembly","caption":"Full brake pedal assembly, designed for manufacturability and performance."}
+                  {"src":"./assets/images/DogBoneDrawing-1.png","label":"Aluminum Dog Bone Mold Drawing","caption":"Designed an aluminum dog bone mold that would allow us to cast ablative dog bones for tensile strength testing."},
+                  {"src":"./assets/images/dogBone.png","label":"Manufactured Aluminum Dog Bone","caption":"Tested different ways to manufacture the aluminum dog bones, utilizing the rotating chuck vice grip on the manual mill to get the angles."},
+                  {"src":"./assets/images/AblativeTensileTesting.png","label":"Ablative Tensile Strength Testing","caption":"Tested the tensile strength of the ablative material using the aluminum dog bone molds."},
+                  {"src":"./assets/images/ablative.png","label":"Ablative Tiles","caption":"Also cast ablative tiles for heat testing."},
+                  {"src":"./assets/images/flamedAblativeTiles.png","label":"Flamed Ablative Tiles","caption":"Tested the ablative tiles fire in order to get regression rates. Will couple this data with the tensile strength data to simulate how it will perform in the combustion chamber."}
                 ]'>
               <a href="#">
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
-                  <img src="./assets/images/pedalFEA.png" alt="Design and Analysis of SAE Baja Braking System" loading="lazy">
+                  <img src="./assets/images/dogBone.png" alt="Ablative Dog Bone Tensile Strength Testing" loading="lazy">
                 </figure>
-                <h3 class="project-title">Design and Analysis of SAE Baja Braking System</h3>
-                <p class="project-category">CAD & Fabrication</p>
-              </a>
-            </li>
-
-            <li class="project-item active" data-filter-item data-category="cad & fabrication"
-                data-project-title="RC Plane — Aerodynamic Design"
-                data-project-description="Personal project: designing and building a radio-controlled airplane from the ground up. Started with airfoil selection and full-aircraft aerodynamic analysis in XFLR5 to size the wing and predict lift, drag, and stability before committing to a build."
-                data-project-tech="XFLR5, Aerodynamic Analysis, Airfoil Selection, CAD"
-                data-project-link="#"
-                data-project-gallery='[
-                  {"src":"./assets/images/PlaneSimulationData.png","label":"XFLR5 Analysis","caption":"Full-aircraft aerodynamic analysis in XFLR5, used to size the wing and evaluate lift, drag, and stability."},
-                  {"src":"./assets/images/planeSTL.png","label":"CAD Model","caption":"SolidWorks model of the airframe built from the XFLR5 geometry, ready to break into printable sections."}
-                ]'>
-              <a href="#">
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/planeThumb.jpg" alt="RC Plane Aerodynamic Design" loading="lazy">
-                </figure>
-                <h3 class="project-title">RC Plane — Aerodynamic Design</h3>
-                <p class="project-category">CAD & Fabrication</p>
+                <h3 class="project-title">Ablative Dog Bone Tensile Strength Testing</h3>
+                <p class="project-category">Rocket Engineering</p>
               </a>
             </li>
 
