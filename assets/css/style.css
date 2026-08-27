@@ -1119,6 +1119,42 @@ main {
   object-fit: cover;
 }
 
+.project-modal-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  min-width: 0;
+}
+
+.gallery-item { min-width: 0; }
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 14px;
+  border: 1px solid var(--jet);
+}
+
+.gallery-item-caption {
+  color: var(--light-gray-70);
+  font-size: var(--fs-6);
+  margin-top: 10px;
+}
+
+.gallery-item-caption strong {
+  display: block;
+  color: var(--white-2);
+  font-weight: var(--fw-500);
+  margin-bottom: 2px;
+}
+
+.gallery-divider {
+  border: none;
+  border-top: 1px solid var(--jet);
+  margin: 0;
+}
+
 .project-modal-details {
   display: flex;
   flex-direction: column;
