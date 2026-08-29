@@ -137,34 +137,35 @@ for (let i = 0; i < projectItems.length; i++) {
     }
 
     // Gallery or single image
+    let gallery = [];
     if (galleryData) {
-      let gallery = [];
-      try { gallery = JSON.parse(galleryData); } catch(e) {}
+      try { gallery = JSON.parse(galleryData); } catch (e) { gallery = []; }
+    }
 
-      if (gallery.length > 0) {
-        // Build the gallery
-        projectModalGallery.innerHTML = "";
-        gallery.forEach(function(item, index) {
-          if (index > 0) {
-            const hr = document.createElement("hr");
-            hr.className = "gallery-divider";
-            projectModalGallery.appendChild(hr);
-          }
-          const div = document.createElement("div");
-          div.className = "gallery-item";
-          div.innerHTML =
-            '<img src="' + item.src + '" alt="' + (item.label || '') + '">' +
-            '<p class="gallery-item-caption">' +
-              (item.label ? '<strong>' + item.label + '</strong>' : '') +
-              (item.caption || '') +
-            '</p>';
-          projectModalGallery.appendChild(div);
-        });
-        projectModalGallery.style.display = "flex";
-        projectModalImgWrapper.style.display = "none";
-      }
+    if (gallery.length > 0) {
+      // Build the gallery
+      projectModalGallery.innerHTML = "";
+      gallery.forEach(function(item, index) {
+        if (index > 0) {
+          const hr = document.createElement("hr");
+          hr.className = "gallery-divider";
+          projectModalGallery.appendChild(hr);
+        }
+        const div = document.createElement("div");
+        div.className = "gallery-item";
+        div.innerHTML =
+          '<img src="' + item.src + '" alt="' + (item.label || '') + '">' +
+          '<p class="gallery-item-caption">' +
+            (item.label ? '<strong>' + item.label + '</strong>' : '') +
+            (item.caption || '') +
+          '</p>';
+        projectModalGallery.appendChild(div);
+      });
+      projectModalGallery.style.display = "flex";
+      projectModalImgWrapper.style.display = "none";
     } else {
       // Single image fallback
+      projectModalGallery.innerHTML = "";
       projectModalImg.src = imgElement ? imgElement.src : "";
       projectModalImg.alt = title;
       projectModalImgWrapper.style.display = "block";
