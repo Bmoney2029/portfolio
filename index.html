@@ -389,11 +389,14 @@
             <li class="project-item active" data-filter-item data-category="rocket engineering"
                 data-project-title="Elysium II — Fuel Injector Redesign for Manufacturability"
                 data-project-description="Redesigned the fuel injector and manifold of the Elysium II liquid rocket engine so the assembly could be machined in house, then manually machined and assembled the finished injector — carrying it from CAD to test-ready hardware. Work done as part of the Texas A&amp;M Rocket Engine Design Team (RED), where I also handled combustion chamber thermal management and ablative lining fabrication."
-                data-project-tech="SolidWorks, Manual Mill, Manual Lathe, TIG Welding, 304 Stainless Steel, GD&amp;T"
+                data-project-tech="SolidWorks, ANSYS Fluent (CFD), Manual Mill, Manual Lathe, TIG Welding, 304 Stainless Steel, GD&amp;T"
                 data-project-link="#"
                 data-project-gallery='[
                   {"src":"./assets/images/OnshapeElysium.png","label":"Initial CAD Design","caption":"This was the initial design, but we had to change it — the curved annulus and internal geometry could not be manufactured with the tooling we had."},
                   {"src":"./assets/images/NewFullInjector.png","label":"Redesigned Injector","caption":"Split the injector into a two-piece upper and lower manifold so the annulus could be machined manually, and added a slot for a screw-in pintle. This let us use the stock 304 stainless steel we already had on hand and made the whole assembly far easier to manufacture."},
+                  {"src":"./assets/images/AnnulusGeometry.png","label":"Annulus Geometry","caption":"Reworked the annulus into a straight tapered profile with 0.100 in fillets so it could be single-point turned on a manual lathe instead of the original unmachinable curve."},
+                  {"src":"./assets/images/annulusCFD.png","label":"Annulus CFD","caption":"ANSYS Fluent static-pressure streamlines through the redesigned annulus, confirming the flow stays attached and evenly distributed around the pintle after the geometry change."},
+                  {"src":"./assets/images/PintleOrificeCFD.png","label":"Pintle Orifice CFD","caption":"CFD of the flow through the screw-in pintle's radial orifices, used to size the holes for the target pressure drop and injection pattern."},
                   {"src":"./assets/images/PintleDrawing.png","label":"Pintle Drawing","caption":"Manufacturing drawing for the screw-in pintle, dimensioned for in-house machining."},
                   {"src":"./assets/images/UpperManifoldDrawing.png","label":"Upper Manifold Drawing","caption":"Manufacturing drawing for the upper manifold that feeds propellant to the injector."},
                   {"src":"./assets/images/machinedPintleUMLM.jpg","label":"Machining to Tolerance","caption":"Machining the pintle, upper manifold, and lower manifold to tolerance — all by hand on manual machines, done entirely solo, roughly 30 hours of machine time in so far."},
@@ -419,14 +422,16 @@
                 data-project-gallery='[
                   {"src":"./assets/images/kiCADschematic.png","label":"KiCad Schematic","caption":"Circuit schematic for the control panel button interface, drafted in KiCad."},
                   {"src":"./assets/images/CustomPCB.jpg","label":"CNC-Milled PCB","caption":"Custom PCB fabricated in-house by CNC-milling a copper-clad board."},
-                  {"src":"./assets/images/WiringControlPanel.jpg","label":"Control Panel Wiring","caption":"Control panel wiring and stepper motors that drive the telescope — wired through to the joysticks, display screen, Raspberry Pi, and Arduino."}
+                  {"src":"./assets/images/WiringControlPanel.jpg","label":"Control Panel Wiring","caption":"Control panel wiring and stepper motors that drive the telescope — wired through to the joysticks, display screen, Raspberry Pi, and Arduino."},
+                  {"src":"./assets/images/TelescopeControlPanel.jpeg","label":"Control Panel","caption":"The finished control panel: Raspberry Pi touchscreen showing live azimuth and altitude, dual joysticks for slewing each axis, and status buttons."},
+                  {"src":"./assets/images/Telescope.jpeg","label":"The Telescope","caption":"The 10-ft motorized telescope the control system drives, on its rolling altitude-azimuth mount."}
                 ]'>
               <a href="#">
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
-                  <img src="./assets/images/WiringControlPanel.jpg" alt="Albireo Telescope Control System Electronics" loading="lazy">
+                  <img src="./assets/images/TelescopeThumb.jpg" alt="Albireo Telescope Control System Electronics" loading="lazy">
                 </figure>
                 <h3 class="project-title">Albireo Telescope — Control System Electronics</h3>
                 <p class="project-category">Electronics & Controls</p>
